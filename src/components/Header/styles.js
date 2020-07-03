@@ -11,3 +11,21 @@ export const Menu = styled.nav`
   justify-content:space-between;
   width:100%;
 `
+
+export const Ul=styled.ul`
+  display:flex;
+  align-items:center;
+  & li{
+    list-style:none;
+    color:#DADADA;
+    margin-right:20px;
+  }
+`
+
+export const A =styled.a`
+  background-color:#F8F8F8;
+  color:#114B5F;
+  border-radius:4px;
+  padding:10px;
+  text-decoration:none;
+`
