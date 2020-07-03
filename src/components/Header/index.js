@@ -1,5 +1,5 @@
 import React from 'react';
-import {TopNavbar, Menu} from './styles'
+import {TopNavbar, Menu, Ul, A} from './styles'
 
 const Header = () => {
   return(
@@ -7,15 +7,15 @@ const Header = () => {
       <TopNavbar>
         <span>Logo</span>
         <Menu>
-          <ul>
+          <Ul>
             <li>
               Inicio
             </li>
             <li>
               Contacto
             </li>
-          </ul>
-          <ul>
+          </Ul>
+          <Ul>
             <li>
               corazon
             </li>
@@ -23,9 +23,9 @@ const Header = () => {
               Iniciar sesión
             </li>
             <li>
-              Regístrarse
+              <A href="/">Regístrarse</A>
             </li>
-          </ul>
+          </Ul>
         </Menu>
       </TopNavbar>
     </>
