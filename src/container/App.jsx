@@ -3,6 +3,7 @@ import '../styles/main.scss';
 import GlobalStyle from '../GlobalStyles';
 
 import Header from '../components/Header';
+import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 
 const App = () => {
@@ -10,6 +11,7 @@ const App = () => {
     <>
       <GlobalStyle />
       <Header />
+      <Contact />
       <Footer />
     </>
   );
