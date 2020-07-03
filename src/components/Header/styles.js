@@ -4,6 +4,7 @@ export const TopNavbar =styled.header`
   height:60px;
   background-color:#114B5F;
   display:flex;
+  align-items:center;
 `
 
 export const Menu = styled.nav`
@@ -28,4 +29,9 @@ export const A =styled.a`
   border-radius:4px;
   padding:10px;
   text-decoration:none;
+`
+export const Img=styled.img `
+  width:160;
+  height:40px;
+  margin-right:20px;
 `

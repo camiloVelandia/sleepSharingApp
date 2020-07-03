@@ -1,12 +1,13 @@
 import React from 'react';
 
-import {TopNavbar, Menu, Ul, A} from './styles'
+import {TopNavbar, Menu, Ul, A,Img} from './styles'
+import logo from '../../../static/logo.png'
 
 const Header = () => {
   return(
     <>
       <TopNavbar>
-        <span>Logo</span>
+        <Img src={logo} alt="logo" />
         <Menu>
           <Ul>
             <li>
@@ -17,7 +18,9 @@ const Header = () => {
             </li>
           </Ul>
           <Ul>
-            <li />
+            <li>
+              <i className="fas fa-heart" />
+            </li>
             <li>
               Iniciar sesión
             </li>
