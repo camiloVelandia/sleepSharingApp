@@ -1,4 +1,5 @@
 import React from 'react';
+
 import {TopNavbar, Menu, Ul, A} from './styles'
 
 const Header = () => {
@@ -16,9 +17,7 @@ const Header = () => {
             </li>
           </Ul>
           <Ul>
-            <li>
-              corazon
-            </li>
+            <li />
             <li>
               Iniciar sesión
             </li>
@@ -27,6 +26,7 @@ const Header = () => {
             </li>
           </Ul>
         </Menu>
+        <span />
       </TopNavbar>
     </>
   )
