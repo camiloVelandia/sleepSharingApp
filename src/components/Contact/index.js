@@ -1,7 +1,7 @@
 import React from 'react';
 import { Section, ImageContainer, P } from './styles';
 
-const index = () => {
+const Contact = () => {
   return (
     <Section>
       <h2>¿Estas buscando un inquilino o un compañero de piso?</h2>
@@ -18,4 +18,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default Contact;

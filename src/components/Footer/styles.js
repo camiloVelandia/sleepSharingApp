@@ -23,7 +23,6 @@ export const Container = styled.div`
 export const Article = styled.article`
   width: 30%;
   height: 100%;
-  padding: 20px;
   & img {
     text-align: left;
   }
