@@ -1,11 +1,24 @@
 import React from 'react';
-import { BottomNavbar, Container, Article, P, P2, Heading } from './styles';
+import {
+  BottomNavbar,
+  Figure,
+  Container,
+  Article,
+  P,
+  P2,
+  Heading,
+} from './styles';
+import Platzi from '../../../static/platzi-logo.png';
+import mainLogo from '../../../static/logo.png';
 
 const Footer = () => {
   return (
     <BottomNavbar>
       <Container>
         <Article>
+          <Figure>
+            <img src={mainLogo} alt="Logo" />{' '}
+          </Figure>
           <P>
             Primer buscador de toomies en lationamerica, ubica facilmente el
             apartamento de tus sueños
@@ -18,7 +31,12 @@ const Footer = () => {
         </Article>
 
         <Article>
-          <Heading>con el respaldo de:</Heading>
+          <Heading>
+            con el respaldo de:
+            <figure>
+              <img src={Platzi} alt="platzi logo" />
+            </figure>
+          </Heading>
         </Article>
       </Container>
     </BottomNavbar>

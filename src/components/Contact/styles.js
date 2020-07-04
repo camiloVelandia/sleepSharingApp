@@ -16,7 +16,10 @@ export const Section = styled.section`
 export const ImageContainer = styled.div`
   display: flex;
   justify-content: center;
-  align-items: center;
+  & figure {
+    margin: 15px 20px;
+    font-size: 40px;
+  }
 `;
 export const P = styled.p`
   margin: 0;
