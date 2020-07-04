@@ -58,6 +58,7 @@ export const ButtonContainer =styled.div`
     background-color:#F8F8F8;
     color:#028090;
     text-decoration:none;
+    border-radius:8px;
   }
   & a.host__button{
     color:#F8F8F8;
