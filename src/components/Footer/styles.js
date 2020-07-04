@@ -24,28 +24,42 @@ export const Article = styled.article`
   width: 30%;
   height: 100%;
   padding: 20px;
+  & img {
+    text-align: left;
+  }
   @media (max-width: 767px) {
     width: 100%;
-    padding: 5px 20px;
+    padding: 5px 0px;
   }
 `;
 export const P = styled.p`
   width: 80%;
   text-align: left;
-  margin-top: 60px;
+  margin-top: -10px;
   @media (max-width: 767px) {
     margin-top: 0;
+    width: 100%;
   }
 `;
 export const P2 = styled.p`
   text-align: left;
+  padding-top: 20px;
   @media (min-width: 1366px) {
     text-align: center;
   }
 `;
 export const Heading = styled.h2`
   text-align: left;
+  & figure {
+    text-align: center;
+  }
   @media (min-width: 1366px) {
     text-align: center;
+  }
+`;
+export const Figure = styled.h2`
+  text-align: center;
+  @media (min-width: 768px) {
+    text-align: left;
   }
 `;
