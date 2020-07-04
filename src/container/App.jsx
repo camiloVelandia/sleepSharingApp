@@ -17,7 +17,7 @@ const App = () => {
       <GlobalStyle />
       <Header />
       <Hero />
-      {/* <Cards /> */}
+      <Cards />
       {/* <PageNotFound /> */}
       <Prom />
       <Contact />

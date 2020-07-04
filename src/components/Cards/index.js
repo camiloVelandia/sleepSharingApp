@@ -1,29 +1,32 @@
 import React from 'react';
-import {Bgimg} from './styles';
+import {Bgimg, Detailscards,Imgprofile} from './styles';
+import Imageprofile from '../../../static/profile.jpg'
 
 const Cards = () => {
   return(
     <>
       <Bgimg>
-        <img src="" alt="" />
+        <Imgprofile src={Imageprofile} alt="" />
       </Bgimg>
-      <p>
-        <i className="fas fa-map-marker-alt" />
-        Bella vista-Bogota-Colombia
-      </p>
-      <p>
-        <i className="fas fa-map-marker-alt" />
-        500.00 COP
-      </p>
-      <p>servicios y restricciones</p>
-      <div>
-        <i className="fas fa-heart" />
-        <i className="fas fa-heart" />
-        <i className="fas fa-heart" />
-        <i className="fas fa-heart" />
-        <i className="fas fa-heart" />
-      </div>
-      <i className="fas fa-heart" />
+      <Detailscards>
+        <p>
+          <i className="fas fa-map-marker-alt" />
+          Bella vista-Bogota-Colombia
+        </p>
+        <p>Barrios Unidos</p>
+        <p>
+          <i className="fas fa-dollar-sign" />
+          500.00 COP
+        </p>
+        <p>servicios y restricciones</p>
+        <div>
+          <i className="fas fa-wifi" />
+          <i className="fas fa-warehouse" />
+          <i className="fas fa-broom" />
+          <i className="fas fa-smoking-ban" />
+        </div>
+        <i className="far fa-heart" />
+      </Detailscards>
     </>
   )
 }
