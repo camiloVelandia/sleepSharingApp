@@ -7,7 +7,8 @@ import Hero from '../components/Hero';
 import Prom from '../components/Prom';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
-import Login from '../components/Login';
+import Carousel from '../components/Carousel';
+// import Login from '../components/Login';
 // import RegisterRoom from '../components/RegisterRoom';
 // import Register from '../components/Register';
 // import Banner from '../components/Banner';
@@ -24,7 +25,8 @@ const App = () => {
       <Hero />
       <Prom />
       <Contact />
-      <Login />
+      <Carousel />
+      {/* <Login /> */}
       <Footer />
       {/* <Cards /> */}
       {/* <PageNotFound /> */}
