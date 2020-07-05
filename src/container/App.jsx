@@ -7,7 +7,8 @@ import Hero from '../components/Hero';
 import Prom from '../components/Prom';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
-import Carousel from '../components/Carousel';
+import Details from '../components/Details';
+// import Carousel from '../components/Carousel';
 // import Login from '../components/Login';
 // import RegisterRoom from '../components/RegisterRoom';
 // import Register from '../components/Register';
@@ -25,7 +26,8 @@ const App = () => {
       <Hero />
       <Prom />
       <Contact />
-      <Carousel />
+      <Details />
+      {/* <Carousel /> */}
       {/* <Login /> */}
       <Footer />
       {/* <Cards /> */}
