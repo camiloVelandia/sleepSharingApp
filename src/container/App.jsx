@@ -7,7 +7,9 @@ import Hero from '../components/Hero';
 import Prom from '../components/Prom';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
-import RegisterRoom from '../components/RegisterRoom';
+import Login from '../components/Login';
+// import RegisterRoom from '../components/RegisterRoom';
+// import Register from '../components/Register';
 // import Banner from '../components/Banner';
 // import Cards from '../components/Cards';
 // import Sppiner from '../general/Sppiner'
@@ -20,14 +22,16 @@ const App = () => {
       <Header />
 
       <Hero />
+      <Prom />
+      <Contact />
+      <Login />
+      <Footer />
       {/* <Cards /> */}
       {/* <PageNotFound /> */}
-      <Prom />
+      {/* <Register /> */}
       {/* <Banner /> */}
-      <Contact />
-      <RegisterRoom />
+      {/* <RegisterRoom /> */}
 
-      <Footer />
       {/* <Sppiner /> */}
     </>
   );
