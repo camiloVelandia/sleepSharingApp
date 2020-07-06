@@ -26,6 +26,7 @@ html {
 body {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
+  background-color:#f8f8f8;
 }
 
 

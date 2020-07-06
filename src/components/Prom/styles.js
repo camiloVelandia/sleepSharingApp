@@ -4,7 +4,7 @@ export const Section = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: f2f2f2;
+  background-color: #F2F2F2;
   max-width: 1366px;
   margin: 0 auto;
   color: #456990;
@@ -28,3 +28,9 @@ export const Article = styled.article`
     width: 100%;
   }
 `;
+
+
+export const Wrapper =styled.div`
+  width:100%;
+  background-color:#F2F2F2;
+`

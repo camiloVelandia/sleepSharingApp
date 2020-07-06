@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 import  cardsimg from '../../../static/Rectangle_13.jpg'
 
+export const Card = styled.div`
+  min-height:300px;
+  border-radius: 0 0 8px 8px ;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+`
+
+
 export const Bgimg = styled.div`
   border-radius:8px 8px 0 0;
   background-image:url(${cardsimg});
@@ -12,6 +19,15 @@ export const Bgimg = styled.div`
   height:300px;
   width:400px;
 `
+
+
+export const Imgprofile = styled.img`
+  border-radius:50%;
+  height:50px;
+  width:50px;
+  margin:10px;
+`
+
 export const Detailscards = styled.div`
   height:211px;
   display:flex;
@@ -25,21 +41,6 @@ export const Detailscards = styled.div`
     margin: 0;
   }
 `
-
-export const Imgprofile = styled.img`
-  border-radius:50%;
-  height:50px;
-  width:50px;
-  margin:10px;
-`
-export const Card = styled.div`
-  display:block;
-  border-radius: 0 0 8px 8px ;
-  height:300px;
-  width:400px;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-`
-
 
 
 export const Services = styled.div`

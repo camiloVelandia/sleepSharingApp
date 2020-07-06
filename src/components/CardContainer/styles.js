@@ -9,10 +9,12 @@ export const Section = styled.div`
   }
 `;
 export const Container = styled.div`
-  display: flex;
+  grid-template-columns:repeat(3,1fr);
+  display: grid;
+  gap:20px;
   width: 80%;
   max-width: 1166px;
-  margin: 0 auto;
+  margin: 20px auto;
   justify-content: space-evenly;
   flex-wrap: wrap;
   & section {
