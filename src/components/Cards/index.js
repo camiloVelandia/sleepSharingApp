@@ -1,10 +1,10 @@
 import React from 'react';
-import {Bgimg, Detailscards,Imgprofile} from './styles';
-import Imageprofile from '../../../static/profile.jpg'
+import { Bgimg, Detailscards, Imgprofile } from './styles';
+import Imageprofile from '../../../static/profile.jpg';
 
 const Cards = () => {
-  return(
-    <>
+  return (
+    <section>
       <Bgimg>
         <Imgprofile src={Imageprofile} alt="" />
       </Bgimg>
@@ -27,8 +27,8 @@ const Cards = () => {
         </div>
         <i className="far fa-heart" />
       </Detailscards>
-    </>
-  )
-}
+    </section>
+  );
+};
 
-export default Cards
+export default Cards;

@@ -6,8 +6,9 @@ import Header from '../components/Header';
 import Hero from '../components/Hero';
 import Prom from '../components/Prom';
 import Contact from '../components/Contact';
+import CardContainer from '../components/CardContainer';
 import Footer from '../components/Footer';
-import Details from '../components/Details';
+// import Details from '../components/Details';
 // import Carousel from '../components/Carousel';
 // import Login from '../components/Login';
 // import RegisterRoom from '../components/RegisterRoom';
@@ -24,9 +25,10 @@ const App = () => {
       <Header />
 
       <Hero />
+      <CardContainer />
       <Prom />
       <Contact />
-      <Details />
+      {/* <Details /> */}
       {/* <Carousel /> */}
       {/* <Login /> */}
       <Footer />
