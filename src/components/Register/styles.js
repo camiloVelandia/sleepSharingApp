@@ -3,14 +3,14 @@ import styled from 'styled-components';
 export const Section = styled.section`
   background-color: f8f8f8;
   max-width: 1366px;
-  color: #000;
+  color: var(--dark1-color);
   margin: 0 auto;
   /* @media (max-width: 767px) {
     display: block;
   } */
 `;
 export const H1 = styled.h1`
-  color: #555555;
+  color: var(--dark2-color);
   text-align: center;
   font-size: 24px;
   /* @media (max-width: 767px) {
@@ -50,10 +50,10 @@ export const FormGroup1 = styled.div`
     padding-right: 10px;
   }
   & input {
-    border: 1px solid #ababab;
+    border: 1px solid var(--light4-color);
     height: 18px;
     width: 18px;
-    color: #000;
+    color: var(--dark1-color);
   }
   @media (max-width: 767px) {
     width: 80%;
@@ -81,11 +81,11 @@ export const FormGroup2 = styled.div`
     width: 100%;
     max-width: 360px;
     height: 50px;
-    border: 1px solid #028090;
+    border: 1px solid var(--accet1-color);
     border-radius: 4px;
     margin-bottom: 20px;
     &::placeholder {
-      color: #028090;
+      color: var(--accet1-color);
       padding-left: 10px;
       text-transform: capitalize;
       font-size: 14px;
@@ -106,8 +106,8 @@ export const Button = styled.div`
     height: 40px;
     border-radius: 4px;
     border: none;
-    color: #fff;
-    background-color: #028090;
+    color: var(--light2-color);
+    background-color: var(--accet1-color);
   }
   /* @media (max-width: 767px) {
     display: block;

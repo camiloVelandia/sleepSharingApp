@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const Section = styled.div`
-  background-color: #f8f8f8;
+  background-color: var(--bg-color);
   & h2 {
     text-align: center;
     font-size: 30px;
-    color: #555;
+    color: var(--dark2-color);
   }
 `;
 export const Container = styled.div`

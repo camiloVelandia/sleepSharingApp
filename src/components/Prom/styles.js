@@ -4,10 +4,10 @@ export const Section = styled.section`
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: #F2F2F2;
+  background-color: var(--light2-color);
   max-width: 1366px;
   margin: 0 auto;
-  color: #456990;
+  color: var(--accet3-color);
   padding: 20px 0;
   @media (max-width: 767px) {
     display: block;
@@ -32,5 +32,5 @@ export const Article = styled.article`
 
 export const Wrapper =styled.div`
   width:100%;
-  background-color:#F2F2F2;
+  background-color:var(--light2-color);
 `

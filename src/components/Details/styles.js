@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Section = styled.section`
-  background-color: #f2f2f2;
+  background-color: var(--light2-color);
   text-align: center;
 `;
 export const H1 = styled.h1`
@@ -9,7 +9,7 @@ export const H1 = styled.h1`
   padding: 20px;
   margin: 0 auto;
   width: 95%;
-  border-bottom: 1px solid #dadada;
+  border-bottom: 1px solid var(--light4-color);
 `;
 export const H2 = styled.h2`
   text-align: left;
@@ -27,7 +27,7 @@ export const InfoContainer = styled.div`
   width: 80%;
   display: flex;
   padding-bottom: 50px;
-  color: #456990;
+  color: var(--accet3-color);
   flex-direction: row;
   @media (max-width: 767px) {
     width: 100%;

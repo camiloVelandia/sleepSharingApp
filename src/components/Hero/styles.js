@@ -13,13 +13,13 @@ export const HeroSearch = styled.div`
   align-items:center;
   justify-content:space-around;
   & h1{
-    text-shadow: 2px 2px #777777;;
-    color:#F8F8F8;
+    text-shadow: 2px 2px var(--dark3-color);
+    color:var(--bg-color);
     text-align:center;
   }
   & h2{
-    text-shadow: 2px 2px #777777;;
-    color:#F8F8F8;
+    text-shadow: 2px 2px var(--dark3-color);
+    color:var(--bg-color);
     text-align:center;
     font-size:42px;
   }
@@ -30,7 +30,7 @@ export const Search= styled.div`
   border-radius:20px;
   height:39px;
   width:481px;
-  background-color:#F8F8F8;
+  background-color:var(--bg-color);
   display:flex;
   justify-content:center;
   align-items:center;
@@ -51,17 +51,17 @@ export const ButtonContainer =styled.div`
   & a{
     display:flex;
     align-items:center;
-    border:#028090 solid 1px;
+    border:var(--accet1-color) solid 1px;
     height:41px;
     width:330px;
     justify-content:center;
-    background-color:#F8F8F8;
-    color:#028090;
+    background-color:var(--bg-color);
+    color:var(--accet1-color);
     text-decoration:none;
     border-radius:8px;
   }
   & a.host__button{
-    color:#F8F8F8;
-    background-color:#028090;
+    color:var(--bg-color);
+    background-color:var(--accet1-color);
   }
 `

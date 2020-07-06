@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const Form = styled.form`
-  background-color: #f2f2f2;
+  background-color: var(--light2-color);
   margin: 0;
 `;
 export const H1 = styled.h1`
@@ -9,7 +9,7 @@ export const H1 = styled.h1`
   padding: 30px 0;
   font-weight: 700;
   font-size: 48px;
-  color: #555;
+  color: var(--dark2-color);
   margin: 0;
   @media (max-width: 767px) {
     font-size: 18px;
@@ -21,9 +21,9 @@ export const Container = styled.div`
 `;
 export const SubHeading = styled.p`
   font-weight: 30px;
-  color: #555;
+  color: var(--dark2-color);
   padding-left: 10px;
-  border-bottom: 1px solid #dadada;
+  border-bottom: 1px solid var(--light4-color);
   margin-bottom: 20px;
 `;
 export const InputContainer = styled.div`
@@ -33,20 +33,20 @@ export const InputContainer = styled.div`
   flex-wrap: wrap;
   & input,
   select {
-    background-color: #f8f8f8;
+    background-color: var(--bg-color);
     display: block;
     width: 40%;
     max-width: 360px;
     height: 50px;
-    border: 1px solid #028090;
+    border: 1px solid var(--accet1-color);
     border-radius: 4px;
     margin: 0 40px;
     margin-bottom: 20px;
     outline: none;
-    color: #028090;
+    color: var(--accet1-color);
     &::placeholder {
       padding-left: 10px;
-      color: #028090;
+      color: var(--accet1-color);
     }
     @media (min-width: 700px) and (max-width: 980px) {
       width: 30%;
@@ -56,7 +56,7 @@ export const InputContainer = styled.div`
     }
   }
   & select > option {
-    color: #028090;
+    color: var(--accet1-color);
     max-width: 360px;
   }
 `;
@@ -69,30 +69,30 @@ export const TextArea = styled.div`
     display: block;
     width: 85%;
     padding: 20px;
-    color: #555;
+    color: var(--dark2-color);
     font-size: 18px;
   }
   & textarea {
     margin: 20px 0;
-    background-color: #f2f2f2;
+    background-color: var(--light2-color);
     display: block;
     width: 100%;
-    border: 2px solid #005f6b;
+    border: 2px solid var(--accet1-variant-color);
     border-radius: 4px;
     &::placeholder {
-      color: #005f6b;
+      color: var(--accet1-variant-color);
       padding: 10px 10px;
       font-size: 12px;
     }
   }
 `;
 export const Label = styled.p`
-  color: #555;
+  color: var(--dark2-color);
   font-size: 18px;
   padding-left: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #dadada;
+  border-bottom: 1px solid var(--light4-color);
 `;
 export const File = styled.div`
   width: 70%;
@@ -109,7 +109,7 @@ export const File = styled.div`
   }
   & label {
     cursor: pointer;
-    border: 1px solid #555;
+    border: 1px solid var(--dark2-color);
     padding: 10px;
   }
   @media (max-width: 767px) {
@@ -121,7 +121,7 @@ export const File = styled.div`
 `;
 export const Container2 = styled.div`
   max-width: 1100px;
-  color: #555;
+  color: var(--dark2-color);
   font-size: 18px;
   margin: 0 auto;
 `;
@@ -139,12 +139,12 @@ export const TextArea2 = styled.div`
     display: flex;
     margin: 0 auto;
     width: 80%;
-    background-color: #f2f2f2;
+    background-color: var(--light2-color);
     display: block;
-    border: 2px solid #005f6b;
+    border: 2px solid var(--accet1-variant-color);
     border-radius: 4px;
     &::placeholder {
-      color: #005f6b;
+      color: var(--accet1-variant-color);
       padding: 10px 10px;
       font-size: 12px;
     }
@@ -182,8 +182,8 @@ export const Submit = styled.div`
     width: 100%;
     max-width: 330px;
     height: 40px;
-    background-color: #028090;
-    color: #fff;
+    background-color: var(--accet1-color);
+    color: var(--light2-color);
     font-size: 18px;
     border: none;
     border-radius: 4px;

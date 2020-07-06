@@ -4,7 +4,7 @@ import  cardsimg from '../../../static/Rectangle_13.jpg'
 export const Card = styled.div`
   min-height:300px;
   border-radius: 0 0 8px 8px ;
-  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  box-shadow: var(--box-shadow);
 `
 
 
@@ -33,8 +33,8 @@ export const Detailscards = styled.div`
   display:flex;
   flex-direction:column;
   justify-content:space-around;
-  color:#456990;
-  background-color:#F8F8F8;
+  color:var(--accet3-color);
+  background-color: var(--bg-color);
   padding:0 10px;
   border-radius: 0 0 8px 8px;
   & p{

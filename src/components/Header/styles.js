@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const TopNavbar =styled.header`
   height:60px;
-  background-color:#114B5F;
+  background-color:var(--brand-color);
   display:flex;
   align-items:center;
 `
@@ -18,14 +18,14 @@ export const Ul=styled.ul`
   align-items:center;
   & li{
     list-style:none;
-    color:#DADADA;
+    color:var(--bg-color);
     margin-right:20px;
   }
 `
 
 export const A =styled.a`
-  background-color:#F8F8F8;
-  color:#114B5F;
+  background-color:var(--light4-color);
+  color:var(--brand-color);
   border-radius:4px;
   padding:10px;
   text-decoration:none;
