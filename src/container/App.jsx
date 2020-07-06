@@ -7,9 +7,8 @@ import Hero from '../components/Hero';
 import Prom from '../components/Prom';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
-import Cards from '../components/Cards'
-// import Sppiner from '../general/Sppiner'
-// import PageNotFound from '../general/ PageNotFound'
+import WrapperCards from '../components/WrapperCards'
+
 
 const App = () => {
   return (
@@ -17,12 +16,11 @@ const App = () => {
       <GlobalStyle />
       <Header />
       <Hero />
-      <Cards />
-      {/* <PageNotFound /> */}
+      <WrapperCards />
       <Prom />
       <Contact />
       <Footer />
-      {/* <Sppiner /> */}
+
     </>
   );
 };
