@@ -43,10 +43,12 @@ export const MenuResponsive = styled.div`
     display: none;
   }
 `;
-export const A = styled.a`
+
+export const Button = styled.button`
   background-color: var(--light4-color);
   color: var(--brand-color);
   border-radius: 4px;
   padding: 10px;
   text-decoration: none;
+  cursor: pointer;
 `;

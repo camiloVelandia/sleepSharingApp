@@ -23,12 +23,31 @@ const RegisterRoom = () => {
         <SubHeading>Acerca de la zona</SubHeading>
         <InputContainer>
           <select name="" id="">
-            <option value="value1">Bogota</option>
+            <option value="value1">Bogotá</option>
           </select>
-          <input type="text" placeholder="Direccion" />
+          <input type="text" placeholder="Dirección" />
           <input type="text" placeholder="Barrio" />
           <select name="" id="">
-            <option value="value1">Engativa</option>
+            <option value="value1">Seleccione</option>
+            <option value="value2">Antonio Nariño</option>
+            <option value="value2">Barrios Unidos</option>
+            <option value="value2">Bosa</option>
+            <option value="value2">Chapinero</option>
+            <option value="value2">Ciudad Bolívar</option>
+            <option value="value2">Fontibón</option>
+            <option value="value2">Kennedy</option>
+            <option value="value2">La Candelaria</option>
+            <option value="value2">Los Mártires</option>
+            <option value="value2">Puente Aranda</option>
+            <option value="value2">Rafael Uribe Uribe</option>
+            <option value="value2">San Cristóbal</option>
+            <option value="value2">Santa Fe</option>
+            <option value="value2">Suba</option>
+            <option value="value2">Sumapaz</option>
+            <option value="value2">Teusaquillo</option>
+            <option value="value2">Tunjuelito</option>
+            <option value="value2">Usaquén</option>
+            <option value="value2">Usme</option>
           </select>
           <input type="text" placeholder="Tamaño em mts2" />
           <input type="text" placeholder="Precio" />
@@ -42,7 +61,7 @@ const RegisterRoom = () => {
               id=""
               cols="30"
               rows="10"
-            ></textarea>
+            />
           </label>
           <label htmlFor="">
             Describe los muebles con que cuenta el lugar
@@ -52,7 +71,7 @@ const RegisterRoom = () => {
               id=""
               cols="30"
               rows="10"
-            ></textarea>
+            />
           </label>
         </TextArea>
       </Container>
@@ -103,7 +122,7 @@ const RegisterRoom = () => {
           </Checkbox>
           <Checkbox>
             <label>
-              <i class="fas fa-toilet"></i>
+              <i className="fas fa-toilet" />
               <span>baño privado</span>
             </label>
             <input type="checkbox" name="" id="" />
@@ -124,7 +143,9 @@ const RegisterRoom = () => {
           </Checkbox>
           <Checkbox>
             <label>
-              <i class="fas fa-smoking"></i> <span>zona de fumadores</span>
+              <i className="fas fa-smoking" /> 
+              {' '}
+              <span>zona de fumadores</span>
             </label>
             <input type="checkbox" name="" id="" />
           </Checkbox>
@@ -144,7 +165,7 @@ const RegisterRoom = () => {
             id=""
             cols="30"
             rows="10"
-          ></textarea>
+          />
         </TextArea2>
       </Container2>
 
