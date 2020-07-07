@@ -6,6 +6,7 @@ export const Card = styled.div`
   border-radius: 0 0 8px 8px;
   box-shadow: var(--box-shadow);
   max-width: 400px;
+  width: 100%;
 `;
 
 export const Bgimg = styled.div`
@@ -17,7 +18,8 @@ export const Bgimg = styled.div`
   display: flex;
   align-items: flex-end;
   height: 300px;
-  width: 400px;
+  max-width: 400px;
+  width: 100%;
 `;
 
 export const Imgprofile = styled.img`

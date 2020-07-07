@@ -15,9 +15,8 @@ import Footer from '../components/Footer';
 // import Register from '../components/Register';
 // import Banner from '../components/Banner';
 // import Cards from '../components/Cards';
-// import Sppiner from '../general/Sppiner'
-// import PageNotFound from '../general/ PageNotFound'
-
+// // import Sppiner from '../general/Sppiner';
+// import PageNotFound from '../general/ PageNotFound';
 
 const App = () => {
   return (
@@ -30,15 +29,14 @@ const App = () => {
       <CardContainer />
       <Prom />
       <Contact />
-      {/* <Details /> */}
-      {/* <Carousel /> */}
-      {/* <Login /> */}
       <Footer />
-      {/* <Cards /> */}
-      {/* <PageNotFound /> */}
-      {/* <Register /> */}
-      {/* <Banner /> */}
-      {/* <RegisterRoom /> */}
+      {/* <Details />
+      <Login />
+      <Cards />
+      <PageNotFound />
+      <Register />
+      <Banner />
+      <RegisterRoom /> */}
 
       {/* <Sppiner /> */}
     </>

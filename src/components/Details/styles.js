@@ -40,7 +40,7 @@ export const InfoContainer = styled.div`
   }
 `;
 export const Ubicacion = styled.div`
-  width: 50%;
+  width: 25%;
   text-align: left;
   & h2 {
     font-size: 18px;

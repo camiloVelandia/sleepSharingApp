@@ -7,6 +7,9 @@ import {
   Button,
   FormField,
   FormGroup2,
+  Photo,
+  PhotoButton,
+  PhotoContainer,
 } from './styles';
 
 const Register = () => {
@@ -59,6 +62,15 @@ const Register = () => {
             </label>
           </FormGroup2>
         </FormField>
+        <PhotoContainer>
+          <Photo>
+            <label htmlFor="upload-photo">
+              <i className="fas fa-camera" />
+            </label>
+            <input type="file" name="photo" id="upload-photo" />
+          </Photo>
+          <input type="submit" value="Cargar imagen" />
+        </PhotoContainer>
         <Button>
           <input type="submit" value="Registrarse" />
         </Button>
