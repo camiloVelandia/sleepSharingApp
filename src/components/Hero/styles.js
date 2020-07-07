@@ -2,25 +2,33 @@ import styled from 'styled-components';
 import heroImage from '../../../static/hero_image.png';
 
 export const HeroSearch = styled.div`
-  background-image: url(${heroImage});
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
   height: 700px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  position: relative;
+  &:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url(${heroImage});
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    filter: brightness(0.5);
+  }
   & h1 {
-    text-shadow: 2px 2px var(--dark3-color);
     color: var(--bg-color);
     text-align: center;
+    position: relative;
   }
   & h2 {
-    text-shadow: 2px 2px var(--dark3-color);
     color: var(--bg-color);
     text-align: center;
     font-size: 42px;
+    position: relative;
   }
   @media (max-width: 767px) {
     height: 100vh;
@@ -35,10 +43,11 @@ export const Search = styled.div`
   border-radius: 20px;
   height: 39px;
   width: 481px;
-  background-color: var(--bg-color);
+  background-color: white;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative;
   & input {
     border: none;
     height: 30px;
@@ -72,9 +81,23 @@ export const ButtonContainer = styled.div`
     text-decoration: none;
     border-radius: 8px;
   }
-  & a.host__button {
-    color: var(--bg-color);
-    background-color: var(--accet1-color);
+`;
+export const ButtonContainer = styled.div`
+  display: flex;
+  width: 80vw;
+  justify-content: space-around;
+  position: relative;
+  & a {
+    display: flex;
+    align-items: center;
+    border: var(--accet1-color) solid 1px;
+    height: 41px;
+    width: 330px;
+    justify-content: center;
+    background-color: white;
+    color: var(--accet1-color);
+    text-decoration: none;
+    border-radius: 8px;
   }
   @media (max-width: 767px) {
     flex-wrap: wrap;

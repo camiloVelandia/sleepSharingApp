@@ -1,5 +1,10 @@
 import styled from 'styled-components';
-import cardsimg from '../../../static/Rectangle_13.jpg';
+
+export const ImgCover = styled.img`
+  object-fit: cover;
+  border-radius: 8px 8px 0 0;
+  min-width: 100%;
+`;
 
 export const Card = styled.div`
   min-height: 300px;
@@ -9,24 +14,11 @@ export const Card = styled.div`
   width: 100%;
 `;
 
-export const Bgimg = styled.div`
-  border-radius: 8px 8px 0 0;
-  background-image: url(${cardsimg});
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  display: flex;
-  align-items: flex-end;
-  height: 300px;
-  max-width: 400px;
-  width: 100%;
-`;
-
 export const Imgprofile = styled.img`
   border-radius: 50%;
-  height: 50px;
-  width: 50px;
-  margin: 10px;
+  height: 70px;
+  width: 70px;
+  margin: -70px 10px 10px 10px;
 `;
 
 export const Detailscards = styled.div`
