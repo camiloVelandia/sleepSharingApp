@@ -32,6 +32,12 @@ const App = () => {
             <Prom />
             <Contact />
           </Route>
+          {/* <Route path="/registrate"><Register /></Route> */}
+          <Route path="/publicar">
+            <div>
+              <h1>holi!</h1>
+            </div>
+          </Route>
         </Switch>
         <Footer />
       </BrowserRouter>
