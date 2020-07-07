@@ -17,11 +17,13 @@ import Footer from '../components/Footer';
 // import Cards from '../components/Cards';
 // // import Sppiner from '../general/Sppiner';
 // import PageNotFound from '../general/ PageNotFound';
+// import PageNotFound from '../general/ PageNotFound';
 
 const App = () => {
   return (
     <>
       <GlobalStyle />
+
       <Header />
       <Hero />
       <BrowserRouter>
