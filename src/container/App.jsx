@@ -1,5 +1,5 @@
 import React from 'react';
-
+import {BrowserRouter, Switch, Route} from 'react-router-dom'
 import GlobalStyle from '../GlobalStyles';
 
 import Header from '../components/Header';
@@ -24,23 +24,17 @@ const App = () => {
     <>
       <GlobalStyle />
       <Header />
-
       <Hero />
-
-      <CardContainer />
-      <Prom />
-      <Contact />
-      {/* <Details /> */}
-      {/* <Carousel /> */}
-      {/* <Login /> */}
-      <Footer />
-      {/* <Cards /> */}
-      {/* <PageNotFound /> */}
-      {/* <Register /> */}
-      {/* <Banner /> */}
-      {/* <RegisterRoom /> */}
-
-      {/* <Sppiner /> */}
+      <BrowserRouter>
+        <Switch>
+          <Route path="/">
+            <CardContainer />
+            <Prom />
+            <Contact />
+          </Route>
+        </Switch>
+        <Footer />
+      </BrowserRouter>
     </>
   );
 };

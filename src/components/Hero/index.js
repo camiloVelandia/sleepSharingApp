@@ -3,7 +3,7 @@ import {HeroSearch, ButtonContainer, Search} from './styles'
 
 const Hero=()=>{
   return(
-    <HeroSearch>
+    <HeroSearch className="hola">
       <h1>
         ENCUENTRA ROOMIES Y APARTAMENTOS EN ARRIENDO Y
         <br />

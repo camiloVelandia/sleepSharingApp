@@ -1,14 +1,16 @@
 import React from 'react';
 import useLazyload from '../../hooks/useLazyLoad'
 import {
-  Bgimg,
   Detailscards,
   Imgprofile,
   Card,
   Services,
-  Heart
+  ImgCover,
+  Heart,
 } from './styles';
 import Imageprofile from '../../../static/profile.jpg'
+import Rectangle_13 from '../../../static/Rectangle_13.jpg'
+
 
 const Cards = () => {
   const {$element, show} = useLazyload()
@@ -17,9 +19,8 @@ const Cards = () => {
       { show
         ?(
           <>
-            <Bgimg>
-              <Imgprofile src={Imageprofile} alt="" />
-            </Bgimg>
+            <ImgCover loading="lazy" src={Rectangle_13} alt="" />
+            <Imgprofile loading="lazy" src={Imageprofile} alt="" />
             <Detailscards>
               <p>
                 <i className="fas fa-map-marker-alt" />
