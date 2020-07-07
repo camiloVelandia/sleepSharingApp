@@ -6,19 +6,19 @@ export const HeroSearch = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  height: 700px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  height: 90vh;
   & h1 {
-    text-shadow: 2px 2px #777777;
-    color: #f8f8f8;
+    text-shadow: 2px 2px var(--dark3-color);
+    color: var(--bg-color);
     text-align: center;
   }
   & h2 {
-    text-shadow: 2px 2px #777777;
-    color: #f8f8f8;
+    text-shadow: 2px 2px var(--dark3-color);
+    color: var(--bg-color);
     text-align: center;
     font-size: 42px;
   }
@@ -34,17 +34,15 @@ export const HeroSearch = styled.div`
 export const Search = styled.div`
   border-radius: 20px;
   height: 39px;
-  width: 100%;
-  max-width: 481px;
-  background-color: #f8f8f8;
+  width: 481px;
+  background-color: var(--bg-color);
   display: flex;
   justify-content: center;
   align-items: center;
   & input {
     border: none;
     height: 30px;
-    width: 100%;
-    max-width: 430px;
+    width: 430px;
   }
   & input:focus {
     outline: none;
@@ -57,6 +55,7 @@ export const Search = styled.div`
     }
   }
 `;
+
 export const ButtonContainer = styled.div`
   display: flex;
   width: 80vw;
@@ -64,19 +63,18 @@ export const ButtonContainer = styled.div`
   & a {
     display: flex;
     align-items: center;
-    border: #028090 solid 1px;
+    border: var(--accet1-color) solid 1px;
     height: 41px;
     width: 330px;
     justify-content: center;
-    background-color: #f8f8f8;
-    color: #028090;
+    background-color: var(--bg-color);
+    color: var(--accet1-color);
     text-decoration: none;
     border-radius: 8px;
-    margin-bottom: 60px;
   }
   & a.host__button {
-    color: #f8f8f8;
-    background-color: #028090;
+    color: var(--bg-color);
+    background-color: var(--accet1-color);
   }
   @media (max-width: 767px) {
     flex-wrap: wrap;

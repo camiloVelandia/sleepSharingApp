@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const BottomNavbar = styled.footer`
   min-height: 200px;
   width: 100%;
-  background-color: #114b5f;
-  color: #dadada;
+  background-color:var(--brand-color);
+  color: var(--light4-color);
   display: flex;
   justify-content: center;
 `;

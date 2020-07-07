@@ -18,6 +18,7 @@ import Footer from '../components/Footer';
 // import Sppiner from '../general/Sppiner'
 // import PageNotFound from '../general/ PageNotFound'
 
+
 const App = () => {
   return (
     <>
@@ -25,6 +26,7 @@ const App = () => {
       <Header />
 
       <Hero />
+
       <CardContainer />
       <Prom />
       <Contact />
