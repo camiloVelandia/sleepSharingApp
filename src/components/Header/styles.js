@@ -50,8 +50,3 @@ export const A = styled.a`
   padding: 10px;
   text-decoration: none;
 `;
-export const Img = styled.img`
-  width: 160;
-  height: 40px;
-  margin-right: 20px;
-`;
