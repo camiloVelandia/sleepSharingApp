@@ -69,23 +69,6 @@ export const ButtonContainer = styled.div`
   display: flex;
   width: 80vw;
   justify-content: space-around;
-  & a {
-    display: flex;
-    align-items: center;
-    border: var(--accet1-color) solid 1px;
-    height: 41px;
-    width: 330px;
-    justify-content: center;
-    background-color: var(--bg-color);
-    color: var(--accet1-color);
-    text-decoration: none;
-    border-radius: 8px;
-  }
-`;
-export const ButtonContainer = styled.div`
-  display: flex;
-  width: 80vw;
-  justify-content: space-around;
   position: relative;
   & a {
     display: flex;
