@@ -1,25 +1,33 @@
 import React from 'react';
-
-import { TopNavbar, Menu, Ul, A, Img, MenuResponsive } from './styles';
+import { Link } from 'react-router-dom';
+import { TopNavbar, Menu, Ul, Button, Img, MenuResponsive } from './styles';
 import logo from '../../../static/logo.png';
 
 const Header = () => {
   return (
     <>
       <TopNavbar>
-        <Img src={logo} alt="logo" />
+        <Link to="/">
+          <Img src={logo} alt="logo" />
+        </Link>
         <Menu>
           <Ul>
-            <li>Inicio</li>
+            <li>
+              <Link to="/">Inicio</Link>
+            </li>
             <li>Contacto</li>
           </Ul>
           <Ul>
             <li>
-              <i className="fas fa-heart" />
+              <Link to="/Favs">
+                <i className="fas fa-heart" />
+              </Link>
             </li>
             <li>Iniciar sesión</li>
             <li>
-              <A href="/">Regístrarse</A>
+              <Link to="/Register">
+                <Button type="button">Regístrarse</Button>
+              </Link>
             </li>
           </Ul>
         </Menu>
