@@ -113,3 +113,49 @@ export const Button = styled.div`
     display: block;
   } */
 `;
+export const Photo = styled.div`
+  text-align: center;
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-around;
+  & input {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+  & label {
+    cursor: pointer;
+    border: 1px solid var(--dark2-color);
+    padding: 10px;
+  }
+  @media (max-width: 767px) {
+    flex-wrap: wrap;
+    & label {
+      width: 15%;
+    }
+  }
+  /* @media (max-width: 767px) {
+    display: block;
+  } */
+`;
+
+export const PhotoContainer = styled.div`
+  display: flex;
+  width: 80%;
+  justify-content: center;
+  & > input {
+    border: 1px solid #028090;
+    background-color: transparent;
+    color: #028090;
+    width: 180px;
+    height: 40px;
+    border-radius: 4px;
+  }
+  /* @media (max-width: 767px) {
+    display: block;
+  } */
+`;

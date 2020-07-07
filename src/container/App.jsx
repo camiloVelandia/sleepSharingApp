@@ -1,5 +1,5 @@
 import React from 'react';
-import {BrowserRouter, Switch, Route} from 'react-router-dom'
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import GlobalStyle from '../GlobalStyles';
 
 import Header from '../components/Header';
@@ -15,14 +15,15 @@ import Footer from '../components/Footer';
 // import Register from '../components/Register';
 // import Banner from '../components/Banner';
 // import Cards from '../components/Cards';
-// import Sppiner from '../general/Sppiner'
-// import PageNotFound from '../general/ PageNotFound'
-
+// // import Sppiner from '../general/Sppiner';
+// import PageNotFound from '../general/ PageNotFound';
+// import PageNotFound from '../general/ PageNotFound';
 
 const App = () => {
   return (
     <>
       <GlobalStyle />
+
       <Header />
       <Hero />
       <BrowserRouter>

@@ -10,6 +10,7 @@ import {
   Services,
 } from './styles';
 import Carousel from '../Carousel';
+import TextDetails from '../TextDetails';
 
 const Details = () => {
   return (
@@ -38,6 +39,10 @@ const Details = () => {
             500.00 COP
           </p>
         </Costo>
+        <Costo>
+          <h2> Tamaño en m2</h2>
+          <p>6 m2</p>
+        </Costo>
         <Services>
           <h2>Servicios y restricciones</h2>
           <div>
@@ -48,6 +53,7 @@ const Details = () => {
           </div>
         </Services>
       </InfoContainer>
+      <TextDetails />
     </Section>
   );
 };

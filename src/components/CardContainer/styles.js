@@ -9,9 +9,9 @@ export const Section = styled.div`
   }
 `;
 export const Container = styled.div`
-  grid-template-columns:repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   display: grid;
-  gap:20px;
+  gap: 20px;
   width: 80%;
   max-width: 1166px;
   margin: 20px auto;
@@ -19,5 +19,11 @@ export const Container = styled.div`
   flex-wrap: wrap;
   & section {
     padding-bottom: 30px;
+  }
+  @media (max-width: 1024px) {
+    grid-template-columns: 1fr 1fr;
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
   }
 `;

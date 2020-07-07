@@ -103,7 +103,7 @@ const RegisterRoom = () => {
           </Checkbox>
           <Checkbox>
             <label>
-              <i className="fas fa-bath" />
+              <i class="fas fa-toilet"></i>
               <span>baño privado</span>
             </label>
             <input type="checkbox" name="" id="" />
@@ -124,14 +124,13 @@ const RegisterRoom = () => {
           </Checkbox>
           <Checkbox>
             <label>
-              <i className="fas fa-dog" />
-              <span>zona de fumadores</span>
+              <i class="fas fa-smoking"></i> <span>zona de fumadores</span>
             </label>
             <input type="checkbox" name="" id="" />
           </Checkbox>
           <Checkbox>
             <label>
-              <i className="fas fa-warehouse" />
+              <i className="fas fa-broom" />
               <span>servicio de limpieza</span>
             </label>
             <input type="checkbox" name="" id="" />
