@@ -1,21 +1,25 @@
 import React from 'react';
+import {connect} from 'react-redux'
 import { Section, Container } from './styles';
 import Card from '../Cards';
 
-const CardContainer = () => {
+const CardContainer = ({body}) => {
   return (
     <Section>
       <h2>Destacados</h2>
       <Container>
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
-        <Card />
+        {
+          body.map(item => <Card {...item} />)
+        }
       </Container>
     </Section>
   );
 };
 
-export default CardContainer;
+const mapStateToProps = state => {
+  return {
+    body: state.body
+  }
+}
+
+export default connect(mapStateToProps, null)(CardContainer);

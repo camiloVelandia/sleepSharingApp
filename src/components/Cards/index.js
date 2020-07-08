@@ -13,28 +13,37 @@ import Imageprofile from '../../../static/profile.jpg'
 import Rectangle_13 from '../../../static/Rectangle_13.jpg'
 
 
-const Cards = () => {
+const Cards = ({
+  coverPage = Rectangle_13,
+  imgProfile = Imageprofile,
+  localidad,
+  precio
+
+}) => {
   const {$element, show} = useLazyload()
   return (
     <Card ref={$element}>
       {show ? (
         <>
           <Link to="/Details">
-            <ImgCover loading="lazy" src={Rectangle_13} alt="" />
+            <ImgCover loading="lazy" src={coverPage} alt="" />
           </Link>
-          <Imgprofile loading="lazy" src={Imageprofile} alt="" />
+          <Imgprofile loading="lazy" src={imgProfile} alt="" />
           <Detailscards>
             <p>
               <i className="fas fa-map-marker-alt" />
               {' '}
-              Bella
-              vista-Bogota-Colombia
+              {localidad}
+              {' '}
+              - Bogota - Colombia
             </p>
             <p>Barrios Unidos</p>
             <p>
               <i className="fas fa-dollar-sign" />
               {' '}
-              500.00 COP
+              {precio}
+              {' '}
+              COP
             </p>
             <p>servicios y restricciones</p>
             <Services>
