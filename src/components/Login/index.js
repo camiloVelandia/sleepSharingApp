@@ -6,7 +6,7 @@ const Login = () => {
     <Section>
       <Heading>
         <h2>Inicia sesion</h2>
-        <button>x</button>
+        <button></button>
       </Heading>
       <form action="">
         <Inputs>

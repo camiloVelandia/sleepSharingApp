@@ -18,6 +18,12 @@ export const Menu = styled.nav`
   @media (max-width: 767px) {
     display: none;
   }
+  & button.login {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+  }
 `;
 
 export const Ul = styled.ul`
