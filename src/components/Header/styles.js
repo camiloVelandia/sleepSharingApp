@@ -11,6 +11,10 @@ export const Menu = styled.nav`
   display: flex;
   justify-content: space-between;
   width: 100%;
+  & a {
+    color: white;
+    text-decoration: none;
+  }
   @media (max-width: 767px) {
     display: none;
   }
