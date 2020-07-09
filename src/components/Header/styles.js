@@ -39,7 +39,7 @@ export const Ul = styled.ul`
 export const Img = styled.img`
   width: 160;
   height: 40px;
-  margin-right: 20px;
+  margin-left:20px;
 `;
 export const MenuResponsive = styled.div`
   font-size: 30px;

@@ -4,7 +4,7 @@ import Modal from 'react-modal';
 import Login from '../Login';
 
 import { TopNavbar, Menu, Ul, Button, Img, MenuResponsive } from './styles';
-import logo from '../../../static/logo.png';
+import logo from '../../../static/Logoblanco.png';
 
 Modal.setAppElement('#app');
 const Header = () => {
