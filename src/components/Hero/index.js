@@ -25,7 +25,7 @@ const Hero = () => {
         <Link to="/Register">
           Buscando roomies
         </Link>
-        <Link to="/Register">Publicar una habitación</Link>
+        <Link to="/NewRoom">Publicar una habitación</Link>
       </ButtonContainer>
     </HeroSearch>
   );
