@@ -9,7 +9,7 @@ import {
   Heading,
 } from './styles';
 import Platzi from '../../../static/platzi-logo.png';
-import mainLogo from '../../../static/logo.png';
+import mainLogo from '../../../static/Logoblanco.png';
 
 const Footer = () => {
   return (
@@ -17,7 +17,8 @@ const Footer = () => {
       <Container>
         <Article>
           <Figure>
-            <img src={mainLogo} alt="Logo" />{' '}
+            <img src={mainLogo} alt="Logo" />
+            {' '}
           </Figure>
           <P>
             Primer buscador de toomies en lationamerica, ubica facilmente el
