@@ -1,6 +1,8 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
-import useLazyload from '../../hooks/useLazyLoad'
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { setFavorite, deleteFavorite } from '../../actions';
+import useLazyload from '../../hooks/useLazyLoad';
 import {
   Detailscards,
   Imgprofile,
@@ -9,18 +11,32 @@ import {
   ImgCover,
   Heart,
 } from './styles';
-import Imageprofile from '../../../static/profile.jpg'
-import Rectangle_13 from '../../../static/Rectangle_13.jpg'
+import Imageprofile from '../../../static/profile.jpg';
+import Rectangle_13 from '../../../static/Rectangle_13.jpg';
 
-
-const Cards = ({
-  coverPage = Rectangle_13,
-  imgProfile = Imageprofile,
-  localidad,
-  precio
-
-}) => {
-  const {$element, show} = useLazyload()
+const Cards = (props) => {
+  const {
+    _id,
+    coverPage = Rectangle_13,
+    imgProfile = Imageprofile,
+    localidad,
+    precio,
+  } = props;
+  const { $element, show } = useLazyload();
+  const handleSetFavorite = () => {
+    console.log('hola');
+    props.setFavorite({
+      _id,
+      coverPage,
+      imgProfile,
+      localidad,
+      precio,
+    });
+  };
+  const handleDeleteFavorite = (itemId) => {
+    console.log('bye');
+    props.deleteFavorite(itemId);
+  };
   return (
     <Card ref={$element}>
       {show ? (
@@ -32,18 +48,12 @@ const Cards = ({
           <Detailscards>
             <p>
               <i className="fas fa-map-marker-alt" />
-              {' '}
-              {localidad}
-              {' '}
-              - Bogota - Colombia
+              {localidad} - Bogota - Colombia
             </p>
             <p>Barrios Unidos</p>
             <p>
               <i className="fas fa-dollar-sign" />
-              {' '}
-              {precio}
-              {' '}
-              COP
+              {precio} COP
             </p>
             <p>servicios y restricciones</p>
             <Services>
@@ -54,7 +64,11 @@ const Cards = ({
                 <i className="fas fa-smoking-ban" />
               </figure>
               <figure>
-                <Heart className="far fa-heart" />
+                <Heart className="far fa-heart" onClick={handleSetFavorite} />
+                <Heart
+                  className="fas fa-trash "
+                  onClick={() => handleDeleteFavorite(_id)}
+                />
               </figure>
             </Services>
           </Detailscards>
@@ -62,6 +76,11 @@ const Cards = ({
       ) : null}
     </Card>
   );
-}
+};
 
-export default Cards;
+const mapDispatchToProps = {
+  setFavorite,
+  deleteFavorite,
+};
+
+export default connect(null, mapDispatchToProps)(Cards);
