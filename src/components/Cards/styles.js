@@ -50,3 +50,9 @@ export const Heart = styled.i`
   font-size: 37px;
   margin: 0 10px 20px 0;
 `;
+
+export const Fullheart = styled.i`
+  font-size: 37px;
+  margin: 0 10px 20px 0;
+  color:red
+`;

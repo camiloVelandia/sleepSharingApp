@@ -283,6 +283,7 @@ const initialState = {
       iconos: ['wifi', 'aire', 'aseo'],
     },
   ],
+  
 };
 
 const store = createStore(reducer, initialState);

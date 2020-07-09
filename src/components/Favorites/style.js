@@ -17,6 +17,7 @@ export const Container = styled.div`
   margin: 20px auto;
   justify-content: space-evenly;
   flex-wrap: wrap;
+  min-height:calc(100vh - 164px - 200px);
   & section {
     padding-bottom: 30px;
   }

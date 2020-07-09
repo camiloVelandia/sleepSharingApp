@@ -9,7 +9,7 @@ const Favorites = ({ favorite }) => {
       <h2>Favoritos</h2>
       <Container>
         {favorite.map((item) => (
-          <Card {...item} />
+          <Card {...item} isfavorite />
         ))}
       </Container>
     </Section>

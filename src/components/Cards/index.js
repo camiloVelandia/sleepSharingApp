@@ -10,6 +10,7 @@ import {
   Services,
   ImgCover,
   Heart,
+  Fullheart
 } from './styles';
 import Imageprofile from '../../../static/profile.jpg';
 import Rectangle_13 from '../../../static/Rectangle_13.jpg';
@@ -21,6 +22,7 @@ const Cards = (props) => {
     imgProfile = Imageprofile,
     localidad,
     precio,
+    isfavorite
   } = props;
   const { $element, show } = useLazyload();
   const handleSetFavorite = () => {
@@ -48,12 +50,16 @@ const Cards = (props) => {
           <Detailscards>
             <p>
               <i className="fas fa-map-marker-alt" />
-              {localidad} - Bogota - Colombia
+              {localidad}
+              {' '}
+              - Bogota - Colombia
             </p>
             <p>Barrios Unidos</p>
             <p>
               <i className="fas fa-dollar-sign" />
-              {precio} COP
+              {precio}
+              {' '}
+              COP
             </p>
             <p>servicios y restricciones</p>
             <Services>
@@ -63,13 +69,11 @@ const Cards = (props) => {
                 <i className="fas fa-broom" />
                 <i className="fas fa-smoking-ban" />
               </figure>
-              <figure>
-                <Heart className="far fa-heart" onClick={handleSetFavorite} />
-                <Heart
-                  className="fas fa-trash "
-                  onClick={() => handleDeleteFavorite(_id)}
-                />
-              </figure>
+              {
+                isfavorite
+                ?(<Fullheart className="fas fa-heart" onClick={() => handleDeleteFavorite(_id)} />)
+                :(<Heart className="far fa-heart" onClick={handleSetFavorite} />)
+              }
             </Services>
           </Detailscards>
         </>
