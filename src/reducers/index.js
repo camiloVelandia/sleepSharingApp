@@ -6,13 +6,14 @@ const reducer = (state, action) => {
       return {
         ...state,
         favorite: [...state.favorite, action.payload],
+        ...state.body.fav
       };
     case 'DELETE_FAVORITE':
       return {
         ...state,
         favorite: state.favorite.filter(
           (items) => items._id !== action.payload
-        ),
+        )
       };
     default:
       return state;

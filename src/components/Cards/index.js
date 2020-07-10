@@ -1,3 +1,4 @@
+/* eslint-disable no-nested-ternary */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -13,7 +14,10 @@ import {
   Fullheart
 } from './styles';
 import Imageprofile from '../../../static/profile.jpg';
+// eslint-disable-next-line camelcase
 import Rectangle_13 from '../../../static/Rectangle_13.jpg';
+
+
 
 const Cards = (props) => {
   const {
@@ -22,23 +26,30 @@ const Cards = (props) => {
     imgProfile = Imageprofile,
     localidad,
     precio,
-    isfavorite
+    isfavorite,
+    fav
   } = props;
   const { $element, show } = useLazyload();
+
   const handleSetFavorite = () => {
-    console.log('hola');
+    console.log(props)
+    // eslint-disable-next-line no-console
     props.setFavorite({
       _id,
       coverPage,
       imgProfile,
       localidad,
       precio,
+      fav:true
     });
   };
   const handleDeleteFavorite = (itemId) => {
+    // eslint-disable-next-line no-console
     console.log('bye');
     props.deleteFavorite(itemId);
   };
+
+
   return (
     <Card ref={$element}>
       {show ? (
@@ -72,7 +83,7 @@ const Cards = (props) => {
               {
                 isfavorite
                 ?(<Fullheart className="fas fa-heart" onClick={() => handleDeleteFavorite(_id)} />)
-                :(<Heart className="far fa-heart" onClick={handleSetFavorite} />)
+                :((props.fav) ? <Fullheart className="fas fa-heart" onClick={() => handleDeleteFavorite(_id)} />   : <Heart className="far fa-heart" onClick={handleSetFavorite} />)
               }
             </Services>
           </Detailscards>
