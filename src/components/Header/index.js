@@ -37,6 +37,7 @@ const Header = () => {
                 overlay: {
                   position: 'fixed',
                   top: 0,
+                  zIndex: 999,
                   left: 0,
                   right: 0,
                   bottom: 0,
