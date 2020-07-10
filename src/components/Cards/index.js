@@ -99,6 +99,7 @@ const Cards = (props) => {
   );
 };
 
+
 const mapDispatchToProps = {
   setFavorite,
   deleteFavorite,

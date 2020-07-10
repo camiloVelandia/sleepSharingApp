@@ -17,10 +17,8 @@ const Favorites = ({ favorite }) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    favorite: state.favorite,
-  };
+const mapStateToProps = (reducers) => {
+  return reducers.favoriteReducer
 };
 
 export default connect(mapStateToProps, null)(Favorites);
