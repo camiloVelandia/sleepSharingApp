@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Section, Container } from './style';
 import Card from '../Cards';
 
+
 const Favorites = ({ favorite }) => {
   return (
     <Section>

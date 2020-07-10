@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import { Section, Container } from './styles';
 import Card from '../Cards';
 
+
 const CardContainer = ({body}) => {
   return (
     <Section>

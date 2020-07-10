@@ -26,7 +26,6 @@ const initialState = {
       fotografias: ['Foto1', 'Foto2', 'Foto3', 'Foto4', 'Foto5'],
       muebles: 'cama, silla, mesa pc',
       iconos: ['wifi', 'aire', 'aseo'],
-      fav:false
     },
     {
       _id: '5f05274e636cdb48ec36d2ff',
@@ -44,7 +43,6 @@ const initialState = {
       fotografias: ['Foto1', 'Foto2', 'Foto3', 'Foto4', 'Foto5'],
       muebles: 'cama, silla, mesa pc',
       iconos: ['wifi', 'aire', 'aseo'],
-      fav:false
     },
     {
       _id: '5f05278086e4b94948abecfd',
@@ -62,7 +60,6 @@ const initialState = {
       fotografias: ['Foto1', 'Foto2', 'Foto3', 'Foto4', 'Foto5'],
       muebles: 'cama, silla, mesa pc',
       iconos: ['wifi', 'aire', 'aseo'],
-      fav:false
     },
     {
       _id: '5f0527bf8000f649792d23e0',
@@ -80,7 +77,6 @@ const initialState = {
       fotografias: ['Foto1', 'Foto2', 'Foto3', 'Foto4', 'Foto5'],
       muebles: 'cama, silla, mesa pc',
       iconos: ['wifi', 'aire', 'aseo'],
-      fav:false
     },
     {
       _id: '5f053df580a2735679761ac3',
@@ -98,7 +94,6 @@ const initialState = {
       fotografias: ['Foto1', 'Foto2', 'Foto3', 'Foto4', 'Foto5'],
       muebles: 'cama, silla, mesa pc',
       iconos: ['wifi', 'aire', 'aseo'],
-      fav:false
     },
     {
       _id: '5f053e3580a2735679761ac4',
@@ -116,7 +111,6 @@ const initialState = {
       fotografias: ['Foto1', 'Foto2', 'Foto3', 'Foto4', 'Foto5'],
       muebles: 'cama, silla, mesa pc',
       iconos: ['wifi', 'aire', 'aseo'],
-      fav:false
     },
     {
       _id: '5f053e8480a2735679761ac5',
@@ -134,7 +128,6 @@ const initialState = {
       fotografias: ['Foto1', 'Foto2', 'Foto3', 'Foto4', 'Foto5'],
       muebles: 'cama, silla, mesa pc',
       iconos: ['wifi', 'aire', 'aseo'],
-      fav:false
     },
     {
       _id: '5f05404accfc975927fc281e',
@@ -152,7 +145,6 @@ const initialState = {
       fotografias: ['Foto1', 'Foto2', 'Foto3', 'Foto4', 'Foto5'],
       muebles: 'cama, silla, mesa pc',
       iconos: ['wifi', 'aire', 'aseo'],
-      fav:false
     },
     {
       _id: '5f05418033c81e59bda0318d',
@@ -170,7 +162,6 @@ const initialState = {
       fotografias: ['Foto1', 'Foto2', 'Foto3', 'Foto4', 'Foto5'],
       muebles: 'cama, silla, mesa pc',
       iconos: ['wifi', 'aire', 'aseo'],
-      fav:false
     },
     {
       _id: '5f0541b2bdd52559f71c4a6e',
@@ -188,7 +179,6 @@ const initialState = {
       fotografias: ['Foto1', 'Foto2', 'Foto3', 'Foto4', 'Foto5'],
       muebles: 'cama, silla, mesa pc',
       iconos: ['wifi', 'aire', 'aseo'],
-      fav:false
     },
     {
       _id: '5f054274d08abc5ae8a467ed',
@@ -206,7 +196,6 @@ const initialState = {
       fotografias: ['Foto1', 'Foto2', 'Foto3', 'Foto4', 'Foto5'],
       muebles: 'cama, silla, mesa pc',
       iconos: ['wifi', 'aire', 'aseo'],
-      fav:false
     },
     {
       _id: '5f0542ef43a2ca5b427fbd27',
@@ -224,7 +213,6 @@ const initialState = {
       fotografias: ['Foto1', 'Foto2', 'Foto3', 'Foto4', 'Foto5'],
       muebles: 'cama, silla, mesa pc',
       iconos: ['wifi', 'aire', 'aseo'],
-      fav:false
     },
     {
       _id: '5f054384b564d65b937ccca8',
@@ -242,7 +230,6 @@ const initialState = {
       fotografias: ['Foto1', 'Foto2', 'Foto3', 'Foto4', 'Foto5'],
       muebles: 'cama, silla, mesa pc',
       iconos: ['wifi', 'aire', 'aseo'],
-      fav:false
     },
     {
       _id: '5f0544b9d26b895c6afe6d10',
@@ -260,7 +247,6 @@ const initialState = {
       fotografias: ['Foto1', 'Foto2', 'Foto3', 'Foto4', 'Foto5'],
       muebles: 'cama, silla, mesa pc',
       iconos: ['wifi', 'aire', 'aseo'],
-      fav:false
     },
     {
       _id: '5f0544dad26b895c6afe6d11',
@@ -278,7 +264,6 @@ const initialState = {
       fotografias: ['Foto1', 'Foto2', 'Foto3', 'Foto4', 'Foto5'],
       muebles: 'cama, silla, mesa pc',
       iconos: ['wifi', 'aire', 'aseo'],
-      fav:false
     },
     {
       _id: '5f0544ead26b895c6afe6d12',
@@ -296,7 +281,6 @@ const initialState = {
       fotografias: ['Foto1', 'Foto2', 'Foto3', 'Foto4', 'Foto5'],
       muebles: 'cama, silla, mesa pc',
       iconos: ['wifi', 'aire', 'aseo'],
-      fav:false
     },
   ],
 };

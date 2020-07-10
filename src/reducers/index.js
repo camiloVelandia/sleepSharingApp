@@ -6,7 +6,6 @@ const reducer = (state, action) => {
       return {
         ...state,
         favorite: [...state.favorite, action.payload],
-        ...state.body.fav
       };
     case 'DELETE_FAVORITE':
       return {
