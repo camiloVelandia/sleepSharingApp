@@ -3,6 +3,7 @@ import {connect} from 'react-redux'
 import { Section, Container } from './styles';
 import Card from '../Cards';
 
+
 const CardContainer = ({body}) => {
   return (
     <Section>
@@ -16,10 +17,8 @@ const CardContainer = ({body}) => {
   );
 };
 
-const mapStateToProps = state => {
-  return {
-    body: state.body
-  }
+const mapStateToProps = (reducers) => {
+  return reducers.favoriteReducer;
 }
 
 export default connect(mapStateToProps, null)(CardContainer);

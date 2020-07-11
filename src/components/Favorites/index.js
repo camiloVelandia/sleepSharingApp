@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Section, Container } from './style';
 import Card from '../Cards';
 
+
 const Favorites = ({ favorite }) => {
   return (
     <Section>
@@ -16,10 +17,8 @@ const Favorites = ({ favorite }) => {
   );
 };
 
-const mapStateToProps = (state) => {
-  return {
-    favorite: state.favorite,
-  };
+const mapStateToProps = (reducers) => {
+  return reducers.favoriteReducer
 };
 
 export default connect(mapStateToProps, null)(Favorites);

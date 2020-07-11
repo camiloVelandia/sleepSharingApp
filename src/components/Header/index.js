@@ -71,9 +71,14 @@ const Header = () => {
           <a href="">
             <i className="fas fa-heart" />
           </a>
-          <a href="">
-            <i className="fas fa-bars" />
-          </a>
+          <i className="fas fa-bars" />
+          <Ul>
+            <i onClick={() => setmodalIsOpen(true)}>Iniciar sesion</i>
+            <Link to="/Register">
+              <i>Registrarse</i>
+            </Link>
+            <i>Cerrar sesion</i>
+          </Ul>
         </MenuResponsive>
       </TopNavbar>
     </>

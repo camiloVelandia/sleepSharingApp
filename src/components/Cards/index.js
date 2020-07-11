@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { setFavorite, deleteFavorite } from '../../actions';
 import useLazyload from '../../hooks/useLazyLoad';
+import useLocalStorage from '../../hooks/useLocalStorage';
 import {
   Detailscards,
   Imgprofile,
@@ -27,12 +28,14 @@ const Cards = (props) => {
     localidad,
     precio,
     isfavorite,
-    fav
   } = props;
+  const key =`like-${_id}`
   const { $element, show } = useLazyload();
+  const [liked, setLiked] = useLocalStorage(key, false)
 
   const handleSetFavorite = () => {
-    console.log(props)
+    console.log('hola', liked);
+
     // eslint-disable-next-line no-console
     props.setFavorite({
       _id,
@@ -40,14 +43,17 @@ const Cards = (props) => {
       imgProfile,
       localidad,
       precio,
-      fav:true
     });
+    setLiked(!liked)
   };
   const handleDeleteFavorite = (itemId) => {
     // eslint-disable-next-line no-console
-    console.log('bye');
+    console.log('bye', liked);
     props.deleteFavorite(itemId);
+    setLiked(!liked)
   };
+
+  const Icon = liked ? <Fullheart className="fas fa-heart" onClick={() => handleDeleteFavorite(_id)} /> : <Heart className="far fa-heart" onClick={handleSetFavorite} />
 
 
   return (
@@ -83,7 +89,7 @@ const Cards = (props) => {
               {
                 isfavorite
                 ?(<Fullheart className="fas fa-heart" onClick={() => handleDeleteFavorite(_id)} />)
-                :((props.fav) ? <Fullheart className="fas fa-heart" onClick={() => handleDeleteFavorite(_id)} />   : <Heart className="far fa-heart" onClick={handleSetFavorite} />)
+                :(Icon)
               }
             </Services>
           </Detailscards>
@@ -92,6 +98,7 @@ const Cards = (props) => {
     </Card>
   );
 };
+
 
 const mapDispatchToProps = {
   setFavorite,

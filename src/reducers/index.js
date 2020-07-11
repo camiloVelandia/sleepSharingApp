@@ -1,23 +1,6 @@
-const reducer = (state, action) => {
-  switch (action.type) {
-    case 'SET_FAVORITE':
-    const exist = state.favorite.find(item => item._id === action.payload._id)
-    if (exist) return {...state}
-      return {
-        ...state,
-        favorite: [...state.favorite, action.payload],
-        ...state.body.fav
-      };
-    case 'DELETE_FAVORITE':
-      return {
-        ...state,
-        favorite: state.favorite.filter(
-          (items) => items._id !== action.payload
-        )
-      };
-    default:
-      return state;
-  }
-};
+import { combineReducers } from 'redux'
+import favoriteReducer from './favoriteReducer';
 
-export default reducer;
+export default combineReducers({
+  favoriteReducer
+});
