@@ -1,8 +1,8 @@
-/* eslint-disable no-nested-ternary */
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { setFavorite, deleteFavorite } from '../../actions';
+
+import * as favoritesActions from '../../actions/favoriteActions'
 import useLazyload from '../../hooks/useLazyLoad';
 import useLocalStorage from '../../hooks/useLocalStorage';
 import {
@@ -15,7 +15,6 @@ import {
   Fullheart
 } from './styles';
 import Imageprofile from '../../../static/profile.jpg';
-// eslint-disable-next-line camelcase
 import Rectangle_13 from '../../../static/Rectangle_13.jpg';
 
 
@@ -34,9 +33,6 @@ const Cards = (props) => {
   const [liked, setLiked] = useLocalStorage(key, false)
 
   const handleSetFavorite = () => {
-    console.log('hola', liked);
-
-    // eslint-disable-next-line no-console
     props.setFavorite({
       _id,
       coverPage,
@@ -47,17 +43,13 @@ const Cards = (props) => {
     setLiked(!liked)
   };
   const handleDeleteFavorite = (itemId) => {
-    // eslint-disable-next-line no-console
-    console.log('bye', liked);
     props.deleteFavorite(itemId);
     setLiked(!liked)
   };
 
   const Icon = liked ? <Fullheart className="fas fa-heart" onClick={() => handleDeleteFavorite(_id)} /> : <Heart className="far fa-heart" onClick={handleSetFavorite} />
-
-
   return (
-    <Card ref={$element}>
+    <Card ref={$element} key={_id}>
       {show ? (
         <>
           <Link to="/Details">
@@ -99,10 +91,9 @@ const Cards = (props) => {
   );
 };
 
+const mapStateToProps = (reducers) => {
+  return reducers.favoriteReducer;
+}
 
-const mapDispatchToProps = {
-  setFavorite,
-  deleteFavorite,
-};
+export default connect(mapStateToProps, favoritesActions)(Cards);
 
-export default connect(null, mapDispatchToProps)(Cards);
