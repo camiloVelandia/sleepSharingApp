@@ -1,8 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-import '../styles/main.scss';
-import GlobalStyle from '../GlobalStyles';
-=======
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import GlobalStyle from '../GlobalStyles';
 
@@ -13,15 +9,11 @@ import Favs from '../pages/Favs';
 import NewRoom from '../pages/NewRoom';
 import PageNotFound from '../general/ PageNotFound';
 import Layout from '../components/Layout/index';
->>>>>>> Development
 
 const App = () => {
   return (
     <>
       <GlobalStyle />
-<<<<<<< HEAD
-      hello world
-=======
       <BrowserRouter>
         <Layout>
           <Switch>
@@ -34,7 +26,6 @@ const App = () => {
           </Switch>
         </Layout>
       </BrowserRouter>
->>>>>>> Development
     </>
   );
 };
