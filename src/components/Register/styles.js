@@ -5,6 +5,9 @@ export const Section = styled.section`
   max-width: 1366px;
   color: var(--dark1-color);
   margin: 0 auto;
+  & span {
+    color: red;
+  }
   /* @media (max-width: 767px) {
     display: block;
   } */
@@ -24,6 +27,7 @@ export const H2 = styled.h2`
   padding-bottom: 10px;
   font-size: 18px;
   & span {
+    color: #000;
     width: 45%;
   }
   @media (min-width: 1440px) {
@@ -32,6 +36,7 @@ export const H2 = styled.h2`
   }
 `;
 export const FormGroup1 = styled.div`
+  position: relative;
   width: 80%;
   text-align: center;
   display: flex;
@@ -55,6 +60,11 @@ export const FormGroup1 = styled.div`
     width: 18px;
     color: var(--dark1-color);
   }
+  & span {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
   @media (max-width: 767px) {
     width: 80%;
     & label {
@@ -77,6 +87,7 @@ export const FormField = styled.div`
 `;
 export const FormGroup2 = styled.div`
   width: 45%;
+
   & label > input {
     width: 100%;
     max-width: 360px;
@@ -91,6 +102,13 @@ export const FormGroup2 = styled.div`
       font-size: 14px;
     }
   }
+  & span {
+    display: block;
+    margin-top: -20px;
+    margin-bottom: 20px;
+    color: red;
+  }
+
   @media (max-width: 767px) {
     width: 100%;
   }
@@ -109,6 +127,10 @@ export const Button = styled.div`
     color: var(--light2-color);
     background-color: var(--accet1-color);
   }
+  & input[disabled] {
+    opacity: 0.3;
+    pointer-events: none;
+  }
   /* @media (max-width: 767px) {
     display: block;
   } */
@@ -118,7 +140,7 @@ export const Photo = styled.div`
   width: 70%;
   margin: 0 auto;
   display: flex;
-  justify-content: space-around;
+  justify-content: flex-end;
   & input {
     width: 0.1px;
     height: 0.1px;
@@ -130,7 +152,10 @@ export const Photo = styled.div`
   & label {
     cursor: pointer;
     border: 1px solid var(--dark2-color);
-    padding: 10px;
+    padding: 15px 20px;
+  }
+  & span {
+    position: absolute;
   }
   @media (max-width: 767px) {
     flex-wrap: wrap;
@@ -145,16 +170,9 @@ export const Photo = styled.div`
 
 export const PhotoContainer = styled.div`
   display: flex;
-  width: 80%;
+  width: 40%;
   justify-content: center;
-  & > input {
-    border: 1px solid #028090;
-    background-color: transparent;
-    color: #028090;
-    width: 180px;
-    height: 40px;
-    border-radius: 4px;
-  }
+
   /* @media (max-width: 767px) {
     display: block;
   } */
