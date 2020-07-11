@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 
-
 const Loader = styled.div`
   &.lds-ring {
-    display: inline-block;
+    display: block;
     position: relative;
     width: 80px;
     height: 80px;
+    margin: 0 auto;
   }
   &.lds-ring div {
     box-sizing: border-box;
@@ -15,10 +15,10 @@ const Loader = styled.div`
     width: 64px;
     height: 64px;
     margin: 8px;
-    border: 8px solid #CCCCCC;
+    border: 8px solid #cccccc;
     border-radius: 50%;
     animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-    border-color: #CCCCCC transparent transparent transparent;
+    border-color: #cccccc transparent transparent transparent;
   }
   &.lds-ring div:nth-child(1) {
     animation-delay: -0.45s;
@@ -37,6 +37,6 @@ const Loader = styled.div`
       transform: rotate(360deg);
     }
   }
-`
+`;
 
-export default Loader
+export default Loader;
