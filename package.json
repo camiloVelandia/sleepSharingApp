@@ -18,12 +18,22 @@
   "author": "Camilo Velandia @xander_dev",
   "license": "MIT",
   "dependencies": {
+    "firebase": "^7.16.0",
+    "formik": "^2.1.4",
+    "intersection-observer": "^0.11.0",
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "styled-components": "^5.1.1"
+    "react-modal": "^3.11.2",
+    "react-redux": "^7.2.0",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5",
+    "styled-components": "^5.1.1",
+    "swiper": "^6.0.0"
   },
   "devDependencies": {
     "@babel/core": "7.9.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
     "@babel/preset-env": "7.9.5",
     "@babel/preset-react": "7.9.4",
     "babel-eslint": "10.1.0",

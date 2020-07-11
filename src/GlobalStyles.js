@@ -1,6 +1,49 @@
 import { createGlobalStyle } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
+
+
+/* -------------------------------------------------------------------------- */
+/*----------------------------------Variables-------------------------------- */
+/* -------------------------------------------------------------------------- */
+
+:root{
+  --brand-color:#114B5F;
+
+/* -------------------------------- Secondary ------------------------------- */
+
+  --accet1-color:#028090;
+  --accet1-variant-color:#005F6B;
+  --accet1-disabled-color:#a6c7cb;
+  --accet2-color:#E4FDE1;
+  --accet3-color:#456990;
+  --accet4-color:#F45B69;
+  --bg-color:#F8F8F8;
+
+
+/* ---------------------------------  Greys -------------------------------- */
+  --light2-color:#F2F2F2;
+  --light3-color:#EDEDED;
+  --light4-color:#DADADA;
+
+  --dark1-color:#333333;
+  --dark2-color:#555555;
+  --dark3-color:#777777;
+  --dark4-color:#999999;
+
+/* ------------------------------ Action color ------------------------------ */
+
+  --status-critical-color:#FF4040;
+  --status-warning-color:#FFAA15;
+  --status-ok-color:#00C781;
+  --status-unknown-color:#cccccc;
+
+/* --------------------------------- shadow --------------------------------- */
+  --box-shadow:0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+
+
   /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
@@ -25,6 +68,8 @@ html {
 
 body {
   margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  background-color:#f8f8f8;
 }
 
 
