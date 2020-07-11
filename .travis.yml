@@ -5,22 +5,17 @@ cache:
     - ~/.npm
 node_js:
   - '12'
-git:
-  depth:3
+git: depth:3
 script:
   - yarn build
 deploy:
   provider: pages
+  edge: true
   skip_cleanup: true
   keep_history: true
   github_token: $GITHUB_TOKEN
   local_dir: dist/
   target_branch: gh-pages
-  commit_message:'Project deploy'
+  commit_message: 'Project deploy'
   on:
     branch: master
-
-
-
-  # edge: true
-
