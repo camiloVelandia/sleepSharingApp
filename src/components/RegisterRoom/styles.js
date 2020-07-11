@@ -18,6 +18,9 @@ export const H1 = styled.h1`
 export const Container = styled.div`
   margin: 0 auto;
   max-width: 966px;
+  & span {
+    color: red;
+  }
 `;
 export const SubHeading = styled.p`
   font-weight: 30px;
@@ -31,6 +34,9 @@ export const InputContainer = styled.div`
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  & span {
+    color: red;
+  }
   & input,
   select {
     background-color: var(--bg-color);
@@ -71,6 +77,9 @@ export const TextArea = styled.div`
     padding: 20px;
     color: var(--dark2-color);
     font-size: 18px;
+  }
+  & span {
+    color: red;
   }
   & textarea {
     margin: 20px 0;
@@ -124,6 +133,9 @@ export const Container2 = styled.div`
   color: var(--dark2-color);
   font-size: 18px;
   margin: 0 auto;
+  & span {
+    color: red;
+  }
 `;
 export const ChecboxContainer = styled.div`
   display: flex;
@@ -187,5 +199,9 @@ export const Submit = styled.div`
     font-size: 18px;
     border: none;
     border-radius: 4px;
+  }
+  & input[disabled] {
+    opacity: 0.3;
+    pointer-events: none;
   }
 `;
