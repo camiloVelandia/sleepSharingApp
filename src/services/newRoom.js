@@ -1,7 +1,7 @@
 const API = 'https://ssa-backend.herokuapp.com/api';
 
 export default function newRoom({
-  // idHost,
+  idHost,
   description,
   tamanio,
   localidad,
@@ -12,9 +12,9 @@ export default function newRoom({
   mensajeAnfitrion,
   // estado,
   ciudad,
-  // fotografias,
+  fotografias,
   muebles,
-  // iconos,
+  iconos,
 }) {
   return fetch(`${API}/rooms`, {
     method: 'POST',
@@ -22,7 +22,7 @@ export default function newRoom({
       'content-type': 'application/json',
     },
     body: JSON.stringify({
-      // idHost,
+      idHost,
       description,
       tamanio,
       localidad,
@@ -33,9 +33,9 @@ export default function newRoom({
       mensajeAnfitrion,
       // estado,
       ciudad,
-      // fotografias,
+      fotografias,
       muebles,
-      // iconos,
+      iconos,
     }),
   }).then((res) => {
     if (!res.ok)
