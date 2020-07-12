@@ -10,7 +10,11 @@ const initialState = {
 
 };
 
-const store = createStore(reducers, initialState,applyMiddleware(reduxThunk));
+const store = createStore(
+  reducers,
+  initialState,
+  applyMiddleware(reduxThunk)
+);
 
 ReactDOM.render(
   <Provider store={store}>

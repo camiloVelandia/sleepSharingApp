@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import * as favoritesActions from '../../actions/favoriteActions'
+
+import * as favoriteActions from '../../actions/favoritesActions'
 import useLazyload from '../../hooks/useLazyLoad';
 import useLocalStorage from '../../hooks/useLocalStorage';
 import {
@@ -15,6 +16,7 @@ import {
   Fullheart
 } from './styles';
 import Imageprofile from '../../../static/profile.jpg';
+// eslint-disable-next-line camelcase
 import Rectangle_13 from '../../../static/Rectangle_13.jpg';
 
 
@@ -42,6 +44,7 @@ const Cards = (props) => {
     });
     setLiked(!liked)
   };
+
   const handleDeleteFavorite = (itemId) => {
     props.deleteFavorite(itemId);
     setLiked(!liked)
@@ -95,5 +98,7 @@ const mapStateToProps = (reducers) => {
   return reducers.favoriteReducer;
 }
 
-export default connect(mapStateToProps, favoritesActions)(Cards);
+
+
+export default connect(mapStateToProps, favoriteActions)(Cards);
 
