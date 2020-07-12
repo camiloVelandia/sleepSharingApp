@@ -22,12 +22,15 @@ import Rectangle_13 from '../../../static/Rectangle_13.jpg';
 
 
 const Cards = (props) => {
+  console.log(props.fotografias)
   const {
     _id,
     coverPage = Rectangle_13,
     imgProfile = Imageprofile,
     localidad,
     precio,
+    barrio,
+    fotografias,
     isfavorite,
   } = props;
   const key =`like-${_id}`
@@ -55,7 +58,11 @@ const Cards = (props) => {
     <Card ref={$element} key={_id}>
       {show ? (
         <>
-          <Link to="/Details">
+          <Link to={{
+            pathname: '/Details',
+            search: `?id${_id}`
+          }}
+          >
             <ImgCover loading="lazy" src={coverPage} alt="" />
           </Link>
           <Imgprofile loading="lazy" src={imgProfile} alt="" />
@@ -66,7 +73,7 @@ const Cards = (props) => {
               {' '}
               - Bogota - Colombia
             </p>
-            <p>Barrios Unidos</p>
+            <p>{barrio}</p>
             <p>
               <i className="fas fa-dollar-sign" />
               {precio}

@@ -14,12 +14,11 @@ export const deleteFavorite = (payload) => (dispatch)=>{
 
 
 export const getrooms = () => async (dispatch) => {
-    const API ='https://jsonplaceholder.typicode.com/users'
-        const response = fetch(API)
-        .then(response => response.json())
-        .then(data => console.log(data))
+    const API ='https://ssa-backend.herokuapp.com/api/rooms'
+        const response = await fetch(API);
+        const data = await response.json();
     dispatch({
         type: 'GET_ROOMS',
-        payload: response,
+        payload: data.body,
     })
 }

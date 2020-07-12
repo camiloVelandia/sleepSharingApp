@@ -5,7 +5,6 @@ import Card from '../Cards';
 import *as favoritesActions from '../../actions/favoritesActions'
 
 const CardContainer = (props) => {
-
   useEffect(() => {
     props.getrooms()
   },[])
@@ -16,7 +15,7 @@ const CardContainer = (props) => {
       <h2>Destacados</h2>
       <Container>
         {
-          body.map(item => <Card {...item} key={item._id} />)
+          body.map(item => <Card {...item} key={item._id}  />)
         }
       </Container>
     </Section>

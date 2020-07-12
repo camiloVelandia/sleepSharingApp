@@ -1,8 +1,7 @@
 const INITIAL_STATE = {
   user: {},
   favorite: [],
-  body:[
-  ]
+  body:[]
 };
 
 export default(state = INITIAL_STATE, action ) => {
@@ -21,6 +20,10 @@ export default(state = INITIAL_STATE, action ) => {
           (items) => items._id !== action.payload
         )
       };
+    case 'GET_ROOMS':
+      return {
+        ...state, body:action.payload
+      }
     default:
       return state;
   }
