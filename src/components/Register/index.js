@@ -3,6 +3,7 @@ import { Formik, Form, Field } from 'formik';
 import { Redirect } from 'react-router-dom';
 import register from '../../services/register';
 import Loader from '../../general/Sppiner';
+import FileUpload from '../FileUpload/index'
 import {
   Section,
   H1,
@@ -165,6 +166,7 @@ const Register = () => {
               </Photo>
               <p>sube tu foto</p>
               <span>{errors.foto}</span>
+              <FileUpload />
             </PhotoContainer>
             <Button>
               <Field
