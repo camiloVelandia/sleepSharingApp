@@ -2,7 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import * as favoritesActions from '../../actions/favoriteActions'
+
+import * as favoriteActions from '../../actions/favoritesActions'
 import useLazyload from '../../hooks/useLazyLoad';
 import useLocalStorage from '../../hooks/useLocalStorage';
 import {
@@ -15,17 +16,21 @@ import {
   Fullheart
 } from './styles';
 import Imageprofile from '../../../static/profile.jpg';
+// eslint-disable-next-line camelcase
 import Rectangle_13 from '../../../static/Rectangle_13.jpg';
 
 
 
 const Cards = (props) => {
+  console.log(props.fotografias)
   const {
     _id,
     coverPage = Rectangle_13,
     imgProfile = Imageprofile,
     localidad,
     precio,
+    barrio,
+    fotografias,
     isfavorite,
   } = props;
   const key =`like-${_id}`
@@ -42,6 +47,7 @@ const Cards = (props) => {
     });
     setLiked(!liked)
   };
+
   const handleDeleteFavorite = (itemId) => {
     props.deleteFavorite(itemId);
     setLiked(!liked)
@@ -52,7 +58,11 @@ const Cards = (props) => {
     <Card ref={$element} key={_id}>
       {show ? (
         <>
-          <Link to="/Details">
+          <Link to={{
+            pathname: '/Details',
+            search: `?id${_id}`
+          }}
+          >
             <ImgCover loading="lazy" src={coverPage} alt="" />
           </Link>
           <Imgprofile loading="lazy" src={imgProfile} alt="" />
@@ -63,7 +73,7 @@ const Cards = (props) => {
               {' '}
               - Bogota - Colombia
             </p>
-            <p>Barrios Unidos</p>
+            <p>{barrio}</p>
             <p>
               <i className="fas fa-dollar-sign" />
               {precio}
@@ -95,5 +105,7 @@ const mapStateToProps = (reducers) => {
   return reducers.favoriteReducer;
 }
 
-export default connect(mapStateToProps, favoritesActions)(Cards);
+
+
+export default connect(mapStateToProps, favoriteActions)(Cards);
 
