@@ -9,13 +9,16 @@ const CardContainer = (props) => {
     props.getrooms()
   },[])
 
-  const {body} = props
+
+  const {body,roomsByLocation} = props
   return (
     <Section>
       <h2>Destacados</h2>
       <Container>
         {
-          body.map(item => <Card {...item} key={item._id}  />)
+          (props.roomsByLocation.length)
+            ? roomsByLocation.map(item => <Card {...item} key={item._id}  />)
+            : body.map(item => <Card {...item} key={item._id}  />)
         }
       </Container>
     </Section>

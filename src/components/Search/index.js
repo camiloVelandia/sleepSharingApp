@@ -11,10 +11,10 @@ const Search = (props) => {
 
   const filterByLocation = (e) => {
     setLocation(e.target.value);
-    props.getLocation(e.target.value);
+    props.getLocation(location);
   };
 
-  console.log(props);
+
   return (
     <div>
       <input
@@ -29,6 +29,6 @@ const Search = (props) => {
 
 const mapStateToProps = (reducers) => {
   return reducers.favoriteReducer;
-};
+}
 
 export default connect(mapStateToProps, favoritesActions)(Search);

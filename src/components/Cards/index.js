@@ -74,12 +74,16 @@ const Cards = (props) => {
           <Detailscards>
             <p>
               <i className="fas fa-map-marker-alt" />
-              {localidad} - Bogota - Colombia
+              {localidad}
+              {' '}
+              - Bogota - Colombia
             </p>
             <p>{barrio}</p>
             <p>
               <i className="fas fa-dollar-sign" />
-              {precio} COP
+              {precio}
+              {' '}
+              COP
             </p>
             <p>servicios y restricciones</p>
             <Services>

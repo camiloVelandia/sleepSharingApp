@@ -7,7 +7,10 @@ import reducers from './reducers';
 import App from './container/App';
 
 const initialState = {
-
+  user: {},
+  favorite: [],
+  body: [],
+  roomsByLocation: [],
 };
 
 const store = createStore(
