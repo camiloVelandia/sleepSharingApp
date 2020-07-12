@@ -2,8 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-
-import * as favoriteActions from '../../actions/favoritesActions'
+import * as favoriteActions from '../../actions/favoritesActions';
 import useLazyload from '../../hooks/useLazyLoad';
 import useLocalStorage from '../../hooks/useLocalStorage';
 import {
@@ -13,16 +12,14 @@ import {
   Services,
   ImgCover,
   Heart,
-  Fullheart
+  Fullheart,
 } from './styles';
 import Imageprofile from '../../../static/profile.jpg';
 // eslint-disable-next-line camelcase
 import Rectangle_13 from '../../../static/Rectangle_13.jpg';
 
-
-
 const Cards = (props) => {
-  console.log(props.fotografias)
+  // console.log(props.fotografias)
   const {
     _id,
     coverPage = Rectangle_13,
@@ -33,9 +30,9 @@ const Cards = (props) => {
     fotografias,
     isfavorite,
   } = props;
-  const key =`like-${_id}`
+  const key = `like-${_id}`;
   const { $element, show } = useLazyload();
-  const [liked, setLiked] = useLocalStorage(key, false)
+  const [liked, setLiked] = useLocalStorage(key, false);
 
   const handleSetFavorite = () => {
     props.setFavorite({
@@ -45,23 +42,31 @@ const Cards = (props) => {
       localidad,
       precio,
     });
-    setLiked(!liked)
+    setLiked(!liked);
   };
 
   const handleDeleteFavorite = (itemId) => {
     props.deleteFavorite(itemId);
-    setLiked(!liked)
+    setLiked(!liked);
   };
 
-  const Icon = liked ? <Fullheart className="fas fa-heart" onClick={() => handleDeleteFavorite(_id)} /> : <Heart className="far fa-heart" onClick={handleSetFavorite} />
+  const Icon = liked ? (
+    <Fullheart
+      className="fas fa-heart"
+      onClick={() => handleDeleteFavorite(_id)}
+    />
+  ) : (
+    <Heart className="far fa-heart" onClick={handleSetFavorite} />
+  );
   return (
     <Card ref={$element} key={_id}>
       {show ? (
         <>
-          <Link to={{
-            pathname: '/Details',
-            search: `?id${_id}`
-          }}
+          <Link
+            to={{
+              pathname: '/Details',
+              search: `?id${_id}`,
+            }}
           >
             <ImgCover loading="lazy" src={coverPage} alt="" />
           </Link>
@@ -69,16 +74,12 @@ const Cards = (props) => {
           <Detailscards>
             <p>
               <i className="fas fa-map-marker-alt" />
-              {localidad}
-              {' '}
-              - Bogota - Colombia
+              {localidad} - Bogota - Colombia
             </p>
             <p>{barrio}</p>
             <p>
               <i className="fas fa-dollar-sign" />
-              {precio}
-              {' '}
-              COP
+              {precio} COP
             </p>
             <p>servicios y restricciones</p>
             <Services>
@@ -88,11 +89,14 @@ const Cards = (props) => {
                 <i className="fas fa-broom" />
                 <i className="fas fa-smoking-ban" />
               </figure>
-              {
-                isfavorite
-                ?(<Fullheart className="fas fa-heart" onClick={() => handleDeleteFavorite(_id)} />)
-                :(Icon)
-              }
+              {isfavorite ? (
+                <Fullheart
+                  className="fas fa-heart"
+                  onClick={() => handleDeleteFavorite(_id)}
+                />
+              ) : (
+                Icon
+              )}
             </Services>
           </Detailscards>
         </>
@@ -103,9 +107,6 @@ const Cards = (props) => {
 
 const mapStateToProps = (reducers) => {
   return reducers.favoriteReducer;
-}
-
-
+};
 
 export default connect(mapStateToProps, favoriteActions)(Cards);
-
