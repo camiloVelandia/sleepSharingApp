@@ -3,15 +3,19 @@ import styled from 'styled-components';
 export const ImgCover = styled.img`
   object-fit: cover;
   border-radius: 8px 8px 0 0;
-  min-width: 100%;
+  max-width: 100%;
 `;
 
 export const Card = styled.div`
   min-height: 300px;
   border-radius: 0 0 8px 8px;
   box-shadow: var(--box-shadow);
-  max-width: 400px;
+  max-width: 260px;
   width: 100%;
+  @media (min-width: 768px) {
+    grid-template-columns: 1fr 1fr;
+    max-width: 400px;
+  }
 `;
 
 export const Imgprofile = styled.img`
@@ -54,5 +58,5 @@ export const Heart = styled.i`
 export const Fullheart = styled.i`
   font-size: 37px;
   margin: 0 10px 20px 0;
-  color:red
+  color: red;
 `;

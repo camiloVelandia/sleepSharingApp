@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 export const Section = styled.section`
   width: 100%;
-  max-width: 400px;
+  max-width: 320px;
   height: 100%;
   max-height: 551px;
   padding-bottom: 10px;
@@ -11,6 +11,9 @@ export const Section = styled.section`
   background-color: var(--bg-color);
   /*box shadow? variable*/
   box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.75);
+  @media (min-width: 767px) {
+    max-width: 400px;
+  }
 `;
 export const Heading = styled.div`
   text-align: center;
