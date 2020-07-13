@@ -3,7 +3,7 @@ import { Formik, Form, Field } from 'formik';
 import { Redirect } from 'react-router-dom';
 import register from '../../services/register';
 import Loader from '../../general/Sppiner';
-import FileUpload from '../FileUpload/index'
+import FileUpload from '../FileUpload/index';
 import {
   Section,
   H1,
@@ -64,10 +64,10 @@ const Register = () => {
           if (!values.typeUser) {
             errors.typeUser = 'que deseas hacer es requerido';
           }
-          if (values.password !== values.verificar){
-            errors.password ='las contraseñas no son iguales';
+          if (values.password !== values.verificar) {
+            errors.password = 'las contraseñas no son iguales';
           }
-           return errors;
+          return errors;
         }}
         onSubmit={(values) => {
           console.log(values);
@@ -81,21 +81,11 @@ const Register = () => {
             <FormGroup1>
               <div>
                 <label htmlFor="typeUser">buscar roomie</label>
-                <Field
-                  name="typeUser"
-                  type="radio"
-                  name="typeUser"
-                  value="2"
-                />
+                <Field name="typeUser" type="radio" name="typeUser" value="2" />
               </div>
               <div>
                 <label htmlFor="typeUser">publicar habitacion</label>
-                <Field
-                  name="typeUser"
-                  type="radio"
-                  name="typeUser"
-                  value="1"
-                />
+                <Field name="typeUser" type="radio" name="typeUser" value="1" />
               </div>
               <span>{errors.typeUser}</span>
             </FormGroup1>
@@ -108,11 +98,7 @@ const Register = () => {
               </FormGroup2>
               <FormGroup2>
                 <label htmlFor="">
-                  <Field
-                    name="lastName"
-                    type="text"
-                    placeholder="apellidos"
-                  />
+                  <Field name="lastName" type="text" placeholder="apellidos" />
                 </label>
                 <span>{errors.lastName}</span>
               </FormGroup2>
@@ -144,9 +130,9 @@ const Register = () => {
               </FormGroup2>
               <FormGroup2>
                 <label htmlFor="">
-                  <Field 
+                  <Field
                     name="verificar"
-                    type="password" 
+                    type="password"
                     placeholder="verificar contraseña"
                   />
                 </label>
@@ -157,16 +143,11 @@ const Register = () => {
                 <label htmlFor="upload-photo">
                   <i className="fas fa-camera" />
                 </label>
-                <Field
-                  name="photo"
-                  type="file"
-                  name="foto"
-                  id="upload-photo"
-                />
+                <Field name="photo" type="file" name="foto" id="upload-photo" />
               </Photo>
               <p>sube tu foto</p>
               <span>{errors.foto}</span>
-              <FileUpload />
+              <FileUpload className="upload" />
             </PhotoContainer>
             <Button>
               <Field

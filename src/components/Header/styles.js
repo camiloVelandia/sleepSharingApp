@@ -24,7 +24,6 @@ export const Menu = styled.nav`
     border: none;
     color: white;
     cursor: pointer;
-    
   }
 `;
 
@@ -39,45 +38,46 @@ export const Ul = styled.ul`
 `;
 
 export const Img = styled.img`
-  width: 160;
+  width: 120;
   height: 40px;
-  margin-left:20px;
+  margin-left: 20px;
+  width: 160;
+  @media (min-width: 767px) {
+    width: unset;
+  }
 `;
 export const MenuResponsive = styled.div`
-  display:flex;
+  display: flex;
   position: absolute;
   top: 0px;
-  right: 30px;
+  right: 0px;
   font-size: 16px;
   height: 60px;
   width: 160px;
   align-items: center;
   justify-content: space-around;
-  
-  & Ul { 
-  display: none;
-  position: absolute;
-  flex-direction:column;
-  list-style: none;
-  margin: 57px 0px 0px 0px;
-  padding: 0px;
-  width: 200px;
-  z-index: 1;
-  text-decoration: none;
+
+  & Ul {
+    display: none;
+    position: absolute;
+    flex-direction: column;
+    list-style: none;
+    margin: 57px 0px 0px 0px;
+    padding: 0px;
+    width: 200px;
+    z-index: 1;
+    text-decoration: none;
   }
   & i {
     color: white;
-    
   }
 
-  &:hover > Ul{
-    display:flex;
+  &:hover > Ul {
+    display: flex;
     flex-direction: column;
     text-align: right;
-    background-color: rgba(0,0,0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);
   }
-
-
 
   @media (min-width: 767px) {
     display: none;

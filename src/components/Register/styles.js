@@ -172,8 +172,14 @@ export const PhotoContainer = styled.div`
   display: flex;
   width: 40%;
   justify-content: center;
-
-  /* @media (max-width: 767px) {
+  margin: 0 auto; /* @media (max-width: 767px) {
     display: block;
   } */
+  & input {
+    overflow: hidden;
+    display: none;
+    @media (min-width: 767px) {
+      display: block;
+    }
+  }
 `;
