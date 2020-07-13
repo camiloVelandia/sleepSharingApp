@@ -2,7 +2,8 @@ const INITIAL_STATE = {
   user: {},
   favorite: [],
   body: [],
-  roomsByLocation: [],
+  detailsRooms:[],
+  roomsByLocation:[],
 };
 
 export default (state = INITIAL_STATE, action) => {
@@ -28,7 +29,10 @@ export default (state = INITIAL_STATE, action) => {
       };
     case 'ROOMS_BY_LOCATION':
       const roomsByLocation = state.body.filter(rooms => rooms.localidad.toLowerCase().includes(action.payload.toLowerCase()))
-      return {...state, roomsByLocation }
+      return {...state, roomsByLocation };
+    case 'DETAILS_ROOMS':
+      const detailsRooms = state.body.filter(rooms => rooms._id.toLowerCase().includes(action.payload.toLowerCase()))
+      return {...state, detailsRooms };
     default:
       return state;
   }

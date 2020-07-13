@@ -11,7 +11,8 @@ const initialState = {
   user: {},
   favorite: [],
   body: [],
-  roomsByLocation: [],
+  detailsRooms:[],
+  roomsByLocation:[],
 };
 
 

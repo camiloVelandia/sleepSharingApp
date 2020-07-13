@@ -20,30 +20,37 @@ import TextDetails from '../TextDetails';
 
 const Details = (props) => {
 
-  useEffect(() => {
-    props.getrooms()
-  },[])
-
   const url = window.location.href;
   const regex = /[0-9a-fA-F]{24}$/
   const result = regex.exec(url);
-  console.log(result[0])
-  const {body}= props
-  console.log(body)
+
+  useEffect(() => {
+    props.getrooms()
+    props.getdetails(result[0])
+  },[])
+
+
+const {detailsRooms} = props
+
+const details = { ...detailsRooms}
+console.log(detailsRooms[0])
+
   return (
     <Section>
       <H1>Detalles del inmueble</H1>
       <H2>Fotografias del inmueble</H2>
-      <CaroselContainer>
+      {/* {<CaroselContainer>
         <Carousel />
-      </CaroselContainer>
+      </CaroselContainer>} */}
       <InfoContainer>
         <Ubicacion>
           <h2>Ubicacion</h2>
           <div>
             <i className="fas fa-map-marker-alt" />
             <p>
-              Bella vista - barrios unidos
+              {}
+              {' '}
+              vista - barrios unidos
               {' '}
               <br />
               Bogota
@@ -82,6 +89,5 @@ const Details = (props) => {
 const mapStateToProps = (reducers) => {
   return reducers.favoriteReducer;
 };
-
 
 export default connect(mapStateToProps, favoritesActions)(Details);
