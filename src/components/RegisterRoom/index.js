@@ -22,7 +22,7 @@ const RegisterRoom = () => {
   return (
     <Formik
       initialValues={{
-        idHost: '',
+        idHost: '1sasdasd56dsa54',
         description: '',
         tamanio: '',
         localidad: '',
@@ -33,9 +33,14 @@ const RegisterRoom = () => {
         mensajeAnfitrion: '',
         estado: '',
         ciudad: '',
-        fotografias: [''],
+        fotografias: [
+          'https://s3.amazonaws.com/imagenes.fincaraiz.com.co/FC_COL/2018/08/06/3839078/casa-venta-atlantico-barranquilla-274592551.jpg',
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTTJ2DIWbZJI1h_C8oYFfxyOX1lj9PGjLERAQ&usqp=CAU',
+          'https://images.ctfassets.net/8lc7xdlkm4kt/4sInYEGeWyztEJ9RQSIWgF/210cb7dcc3367bd5ef269436788ce4f7/lemont-casas-envigado-sala.jpg?w=1366&q=100',
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRBYDkf-jhQgJqLW39kMUOXmlKjWpkalX7NDw&usqp=CAU',
+        ],
         muebles: '',
-        iconos: [''],
+        iconos: ['wifi', 'baño'],
       }}
       validate={(values) => {
         const errors = {};

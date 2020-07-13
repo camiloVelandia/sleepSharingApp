@@ -34,11 +34,16 @@ const TextDetails = () => {
         <h2>Si quieres contactar conmigo usa estos canales</h2>
         <div>
           <a
-            href="https://api.whatsapp.com/send?phone=5793208966501&text=Hola!%20me%20parecio%20genial%20tu%20publicacion%20y%20estoy%20interesado!"
+            href="https://api.whatsapp.com/send?phone=573208966501&text=Hola!%20me%20parecio%20genial%20tu%20publicacion%20y%20estoy%20interesado!"
             target="blank"
           >
             <i className="fab fa-whatsapp" />
           </a>
+          {/* <a
+            target="blank"
+            href="mailto:velandiacamilo356@gmail.com?subject=quiero mas info acerca de la habitacion para ser tu roomie&body=hola, 
+te contacto de sleepSharinApp"
+          > */}
           <a
             href="https://www.google.com/intl/es-419/gmail/about/"
             target="blank"

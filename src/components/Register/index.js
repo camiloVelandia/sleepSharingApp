@@ -3,6 +3,7 @@ import { Formik, Form, Field } from 'formik';
 import { Redirect } from 'react-router-dom';
 import register from '../../services/register';
 import Loader from '../../general/Sppiner';
+import FileUpload from '../FileUpload/index';
 import {
   Section,
   H1,
@@ -63,6 +64,9 @@ const Register = () => {
           if (!values.typeUser) {
             errors.typeUser = 'que deseas hacer es requerido';
           }
+          if (values.password !== values.verificar) {
+            errors.password = 'las contraseñas no son iguales';
+          }
           return errors;
         }}
         onSubmit={(values) => {
@@ -77,45 +81,31 @@ const Register = () => {
             <FormGroup1>
               <div>
                 <label htmlFor="typeUser">buscar roomie</label>
-                <Field
-                  name={'typeUser'}
-                  type="radio"
-                  name="typeUser"
-                  value="2"
-                />
+                <Field name="typeUser" type="radio" name="typeUser" value="2" />
               </div>
               <div>
                 <label htmlFor="typeUser">publicar habitacion</label>
-                <Field
-                  name={'typeUser'}
-                  type="radio"
-                  name="typeUser"
-                  value="1"
-                />
+                <Field name="typeUser" type="radio" name="typeUser" value="1" />
               </div>
               <span>{errors.typeUser}</span>
             </FormGroup1>
             <FormField>
               <FormGroup2>
                 <label htmlFor="">
-                  <Field name={'firstName'} type="text" placeholder="nombres" />
+                  <Field name="firstName" type="text" placeholder="nombres" />
                 </label>
                 <span>{errors.firstName}</span>
               </FormGroup2>
               <FormGroup2>
                 <label htmlFor="">
-                  <Field
-                    name={'lastName'}
-                    type="text"
-                    placeholder="apellidos"
-                  />
+                  <Field name="lastName" type="text" placeholder="apellidos" />
                 </label>
                 <span>{errors.lastName}</span>
               </FormGroup2>
               <FormGroup2>
                 <label htmlFor="">
                   <Field
-                    name={'celWpp'}
+                    name="celWpp"
                     type="text"
                     placeholder="Numero de celular"
                   />
@@ -124,14 +114,14 @@ const Register = () => {
               </FormGroup2>
               <FormGroup2>
                 <label htmlFor="">
-                  <Field name={'email'} type="email" placeholder="email" />
+                  <Field name="email" type="email" placeholder="email" />
                 </label>
                 <span>{errors.email}</span>
               </FormGroup2>
               <FormGroup2>
                 <label htmlFor="">
                   <Field
-                    name={'password'}
+                    name="password"
                     type="password"
                     placeholder="contraseña"
                   />
@@ -140,7 +130,11 @@ const Register = () => {
               </FormGroup2>
               <FormGroup2>
                 <label htmlFor="">
-                  <Field type="password" placeholder="verificar contraseña" />
+                  <Field
+                    name="verificar"
+                    type="password"
+                    placeholder="verificar contraseña"
+                  />
                 </label>
               </FormGroup2>
             </FormField>
@@ -149,15 +143,11 @@ const Register = () => {
                 <label htmlFor="upload-photo">
                   <i className="fas fa-camera" />
                 </label>
-                <Field
-                  name={'photo'}
-                  type="file"
-                  name="foto"
-                  id="upload-photo"
-                />
+                <Field name="photo" type="file" name="foto" id="upload-photo" />
               </Photo>
               <p>sube tu foto</p>
               <span>{errors.foto}</span>
+              <FileUpload className="upload" />
             </PhotoContainer>
             <Button>
               <Field
