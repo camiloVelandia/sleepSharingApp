@@ -1,4 +1,9 @@
-import React from 'react';
+import React, {useEffect} from 'react';
+import { connect } from 'react-redux';
+import *as favoritesActions from '../../actions/favoritesActions'
+
+
+
 import {
   Section,
   H1,
@@ -12,7 +17,19 @@ import {
 import Carousel from '../Carousel';
 import TextDetails from '../TextDetails';
 
-const Details = () => {
+
+const Details = (props) => {
+
+  useEffect(() => {
+    props.getrooms()
+  },[])
+
+  const url = window.location.href;
+  const regex = /[0-9a-fA-F]{24}$/
+  const result = regex.exec(url);
+  console.log(result[0])
+  const {body}= props
+  console.log(body)
   return (
     <Section>
       <H1>Detalles del inmueble</H1>
@@ -26,8 +43,12 @@ const Details = () => {
           <div>
             <i className="fas fa-map-marker-alt" />
             <p>
-              Bella vista - barrios unidos <br />
-              Bogota <br />
+              Bella vista - barrios unidos
+              {' '}
+              <br />
+              Bogota
+              {' '}
+              <br />
               Colombia
             </p>
           </div>
@@ -58,4 +79,9 @@ const Details = () => {
   );
 };
 
-export default Details;
+const mapStateToProps = (reducers) => {
+  return reducers.favoriteReducer;
+};
+
+
+export default connect(mapStateToProps, favoritesActions)(Details);

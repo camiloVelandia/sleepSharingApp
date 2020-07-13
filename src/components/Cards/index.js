@@ -58,14 +58,15 @@ const Cards = (props) => {
   ) : (
     <Heart className="far fa-heart" onClick={handleSetFavorite} />
   );
+
   return (
     <Card ref={$element} key={_id}>
       {show ? (
         <>
           <Link
             to={{
-              pathname: '/Details',
-              search: `?id${_id}`,
+              pathname:'/Details',
+              search:`${_id}`
             }}
           >
             <ImgCover loading="lazy" src={coverPage} alt="" />
