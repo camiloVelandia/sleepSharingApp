@@ -32,23 +32,22 @@ const Details = (props) => {
 
 const {detailsRooms} = props
 
-const details = { ...detailsRooms}
-console.log(detailsRooms[0])
+const asd = JSON.parse(JSON.stringify(detailsRooms))
 
   return (
     <Section>
       <H1>Detalles del inmueble</H1>
       <H2>Fotografias del inmueble</H2>
-      {/* {<CaroselContainer>
+      <CaroselContainer>
         <Carousel />
-      </CaroselContainer>} */}
+      </CaroselContainer>
       <InfoContainer>
         <Ubicacion>
           <h2>Ubicacion</h2>
           <div>
             <i className="fas fa-map-marker-alt" />
             <p>
-              {}
+              {asd._id}
               {' '}
               vista - barrios unidos
               {' '}
