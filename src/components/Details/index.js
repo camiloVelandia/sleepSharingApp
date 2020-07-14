@@ -32,7 +32,8 @@ const Details = (props) => {
 
 const {detailsRooms} = props
 
-const asd = JSON.parse(JSON.stringify(detailsRooms))
+// const asd = JSON.parse(JSON.stringify(detailsRooms))
+
 
   return (
     <Section>
