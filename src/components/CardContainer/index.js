@@ -11,6 +11,7 @@ const CardContainer = (props) => {
 
 
   const {body,roomsByLocation} = props
+  console.log(body)
   return (
     <Section>
       <h2>Destacados</h2>

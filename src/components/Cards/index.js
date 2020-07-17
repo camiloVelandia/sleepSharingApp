@@ -19,7 +19,7 @@ import Imageprofile from '../../../static/profile.jpg';
 import Rectangle_13 from '../../../static/Rectangle_13.jpg';
 
 const Cards = (props) => {
-  // console.log(props.fotografias)
+  // console.log(props)
   const {
     _id,
     coverPage = Rectangle_13,
@@ -30,6 +30,10 @@ const Cards = (props) => {
     fotografias,
     isfavorite,
   } = props;
+  // console.log(fotografias)
+  const cover = (fotografias) ? fotografias[0] : coverPage
+  console.log(cover)
+
   const key = `like-${_id}`;
   const { $element, show } = useLazyload();
   const [liked, setLiked] = useLocalStorage(key, false);
@@ -58,6 +62,7 @@ const Cards = (props) => {
   ) : (
     <Heart className="far fa-heart" onClick={handleSetFavorite} />
   );
+
   return (
     <Card ref={$element} key={_id}>
       {show ? (
@@ -68,7 +73,7 @@ const Cards = (props) => {
               search: `?id${_id}`,
             }}
           >
-            <ImgCover loading="lazy" src={coverPage} alt="" />
+            <ImgCover loading="lazy" src={cover} alt="" />
           </Link>
           <Imgprofile loading="lazy" src={imgProfile} alt="" />
           <Detailscards>
