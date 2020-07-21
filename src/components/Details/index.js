@@ -1,7 +1,4 @@
-import React, { useEffect } from 'react';
-import { connect } from 'react-redux';
-import * as favoritesActions from '../../actions/favoritesActions';
-
+import React from 'react';
 import {
   Section,
   H1,
@@ -15,20 +12,7 @@ import {
 import Carousel from '../Carousel';
 import TextDetails from '../TextDetails';
 
-const Details = (props) => {
-  const url = window.location.href;
-  const regex = /[0-9a-fA-F]{24}$/;
-  const result = regex.exec(url);
-
-  useEffect(() => {
-    props.getrooms();
-    props.getdetails(result[0]);
-  }, []);
-
-  const { detailsRooms } = props;
-
-  const asd = JSON.parse(JSON.stringify(detailsRooms));
-
+const Details = () => {
   return (
     <Section>
       <H1>Detalles del inmueble</H1>
@@ -42,7 +26,7 @@ const Details = (props) => {
           <div>
             <i className="fas fa-map-marker-alt" />
             <p>
-              {asd._id} vista - barrios unidos <br />
+              Bella vista - barrios unidos <br />
               Bogota <br />
               Colombia
             </p>
@@ -74,8 +58,4 @@ const Details = (props) => {
   );
 };
 
-const mapStateToProps = (reducers) => {
-  return reducers.favoriteReducer;
-};
-
-export default connect(mapStateToProps, favoritesActions)(Details);
+export default Details;
