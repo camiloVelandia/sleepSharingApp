@@ -14,15 +14,16 @@ import {
   Heart,
   Fullheart,
 } from './styles';
-import Imageprofile from '../../../static/profile.jpg';
 // eslint-disable-next-line camelcase
-import Rectangle_13 from '../../../static/Rectangle_13.jpg';
+const  notImg = 'https://i.imgur.com/CxYnsWp.jpg';
+
+const  Imageprofile = 'https://i.imgur.com/bGLOkZi.jpg';
 
 const Cards = (props) => {
   // console.log(props)
   const {
     _id,
-    coverPage = Rectangle_13,
+    coverPage = notImg,
     imgProfile = Imageprofile,
     localidad,
     precio,
@@ -32,7 +33,7 @@ const Cards = (props) => {
   } = props;
   // console.log(fotografias)
   const cover = (fotografias) ? fotografias[0] : coverPage
-  console.log(cover)
+
 
   const key = `like-${_id}`;
   const { $element, show } = useLazyload();

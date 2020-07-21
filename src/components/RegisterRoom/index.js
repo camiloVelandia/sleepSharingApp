@@ -34,8 +34,8 @@ const RegisterRoom = () => {
         estado: '',
         ciudad: '',
         fotografias: [
-          'https://s3.amazonaws.com/imagenes.fincaraiz.com.co/FC_COL/2018/08/06/3839078/casa-venta-atlantico-barranquilla-274592551.jpg',
           'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTTJ2DIWbZJI1h_C8oYFfxyOX1lj9PGjLERAQ&usqp=CAU',
+          'https://s3.amazonaws.com/imagenes.fincaraiz.com.co/FC_COL/2018/08/06/3839078/casa-venta-atlantico-barranquilla-274592551.jpg',
           'https://images.ctfassets.net/8lc7xdlkm4kt/4sInYEGeWyztEJ9RQSIWgF/210cb7dcc3367bd5ef269436788ce4f7/lemont-casas-envigado-sala.jpg?w=1366&q=100',
           'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRBYDkf-jhQgJqLW39kMUOXmlKjWpkalX7NDw&usqp=CAU',
         ],
@@ -92,11 +92,11 @@ const RegisterRoom = () => {
                 <option value="Bogota">Bogotá</option>
               </Field>
               <span>{errors.ciudad}</span>
-              <Field name={'direccion'} type="text" placeholder="Dirección" />
+              <Field name="direccion" type="text" placeholder="Dirección" />
               <span>{errors.direccion}</span>
-              <Field name={'barrio'} type="text" placeholder="Barrio" />
+              <Field name="barrio" type="text" placeholder="Barrio" />
               <span>{errors.barrio}</span>
-              <Field as="select" name={'localidad'} placeholder="localidad">
+              <Field as="select" name="localidad" placeholder="localidad">
                 <option value="" defaultValue disabled="disabled">
                   Seleccione
                 </option>
@@ -123,12 +123,12 @@ const RegisterRoom = () => {
               <span>{errors.localidad}</span>
 
               <Field
-                name={'tamanio'}
+                name="tamanio"
                 type="text"
                 placeholder="Tamaño em mts2"
               />
               <span>{errors.tamanio}</span>
-              <Field name={'precio'} type="text" placeholder="Precio" />
+              <Field name="precio" type="text" placeholder="Precio" />
               <span>{errors.precio}</span>
             </InputContainer>
             <TextArea>
@@ -137,7 +137,7 @@ const RegisterRoom = () => {
                 <Field
                   as="textarea"
                   placeholder="Describe con detalle el lugar"
-                  name={'description'}
+                  name="description"
                   id=""
                   cols="30"
                   rows="10"
@@ -149,7 +149,7 @@ const RegisterRoom = () => {
                 <Field
                   as="textarea"
                   placeholder="Describe los muebles con que cuenta el lugar"
-                  name={'muebles'}
+                  name="muebles"
                   id=""
                   cols="30"
                   rows="10"

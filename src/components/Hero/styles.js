@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const  heroImage = 'https://images.unsplash.com/photo-1572891086295-6c1c7c476549?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1300&q=80';
+const  heroImage = 'https://images.pexels.com/photos/271816/pexels-photo-271816.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260';
 
 export const HeroSearch = styled.div`
   height: 700px;

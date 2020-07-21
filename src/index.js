@@ -7,13 +7,6 @@ import reduxThunk from 'redux-thunk'
 import reducers from './reducers';
 import App from './container/App';
 
-const initialState = {
-  user: {},
-  favorite: [],
-  body: [],
-  roomsByLocation: [],
-};
-
 
 firebase.initializeApp({
   apiKey: 'AIzaSyAzQ_pZ8Kcqth33V6Dd03J2j9GLgvKrUA4',
@@ -29,7 +22,7 @@ firebase.initializeApp({
 
 const store = createStore(
   reducers,
-  initialState,
+  {},
   compose(
     applyMiddleware(reduxThunk),
     window.devToolsExtension ? window.devToolsExtension() : f => f

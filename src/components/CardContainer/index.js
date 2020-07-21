@@ -9,15 +9,16 @@ const CardContainer = (props) => {
     props.getrooms()
   },[])
 
-
-  const {body,roomsByLocation} = props
-  console.log(body)
+const {filterByLocationReducer} = props
+  const {roomsByLocation} = filterByLocationReducer
+  const { getRoomReducer } = props
+  const { body } = getRoomReducer
   return (
     <Section>
       <h2>Destacados</h2>
       <Container>
         {
-          (props.roomsByLocation.length)
+          (roomsByLocation.length)
             ? roomsByLocation.map(item => <Card {...item} key={item._id}  />)
             : body.map(item => <Card {...item} key={item._id}  />)
         }
@@ -26,8 +27,12 @@ const CardContainer = (props) => {
   );
 };
 
-const mapStateToProps = (reducers) => {
-  return reducers.favoriteReducer;
+const mapStateToProps = ({ getRoomReducer, favoriteReducer, filterByLocationReducer }) => {
+  return {
+    getRoomReducer,
+    favoriteReducer,
+    filterByLocationReducer,
+  }
 }
 
 export default connect(mapStateToProps, favoritesActions)(CardContainer);
