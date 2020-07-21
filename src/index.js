@@ -2,11 +2,12 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import * as firebase from 'firebase/app';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import reduxThunk from 'redux-thunk'
 import reducers from './reducers';
 import App from './container/App';
 
+<<<<<<< HEAD
 const initialState = {
   user: {},
   favorite: [],
@@ -15,6 +16,8 @@ const initialState = {
   roomsByLocation:[],
 };
 
+=======
+>>>>>>> afd4872b8d0df82d18633943958f7d868ec0a573
 
 firebase.initializeApp({
   apiKey: 'AIzaSyAzQ_pZ8Kcqth33V6Dd03J2j9GLgvKrUA4',
@@ -27,10 +30,14 @@ firebase.initializeApp({
   measurementId: 'G-W3PFXFKRKF',
 });
 
+
 const store = createStore(
   reducers,
-  initialState,
-  applyMiddleware(reduxThunk)
+  {},
+  compose(
+    applyMiddleware(reduxThunk),
+    window.devToolsExtension ? window.devToolsExtension() : f => f
+  )
 );
 
 ReactDOM.render(
