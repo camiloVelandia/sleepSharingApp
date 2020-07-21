@@ -12,7 +12,20 @@ import {
 import Carousel from '../Carousel';
 import TextDetails from '../TextDetails';
 
-const Details = () => {
+const Details = (props) => {
+  const url = window.location.href;
+  const regex = /[0-9a-fA-F]{24}$/;
+  const result = regex.exec(url);
+
+  useEffect(() => {
+    props.getrooms();
+    props.getdetails(result[0]);
+  }, []);
+
+  const { detailsRooms } = props;
+
+  // const asd = JSON.parse(JSON.stringify(detailsRooms))
+
   return (
     <Section>
       <H1>Detalles del inmueble</H1>
@@ -26,7 +39,7 @@ const Details = () => {
           <div>
             <i className="fas fa-map-marker-alt" />
             <p>
-              Bella vista - barrios unidos <br />
+              {} vista - barrios unidos <br />
               Bogota <br />
               Colombia
             </p>
