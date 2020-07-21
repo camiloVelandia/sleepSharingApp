@@ -1,8 +1,6 @@
-import React, {useEffect} from 'react';
+import React, { useEffect } from 'react';
 import { connect } from 'react-redux';
-import *as favoritesActions from '../../actions/favoritesActions'
-
-
+import * as favoritesActions from '../../actions/favoritesActions';
 
 import {
   Section,
@@ -17,22 +15,19 @@ import {
 import Carousel from '../Carousel';
 import TextDetails from '../TextDetails';
 
-
 const Details = (props) => {
-
   const url = window.location.href;
-  const regex = /[0-9a-fA-F]{24}$/
+  const regex = /[0-9a-fA-F]{24}$/;
   const result = regex.exec(url);
 
   useEffect(() => {
-    props.getrooms()
-    props.getdetails(result[0])
-  },[])
+    props.getrooms();
+    props.getdetails(result[0]);
+  }, []);
 
+  const { detailsRooms } = props;
 
-const {detailsRooms} = props
-
-const asd = JSON.parse(JSON.stringify(detailsRooms))
+  const asd = JSON.parse(JSON.stringify(detailsRooms));
 
   return (
     <Section>
@@ -47,14 +42,8 @@ const asd = JSON.parse(JSON.stringify(detailsRooms))
           <div>
             <i className="fas fa-map-marker-alt" />
             <p>
-              {asd._id}
-              {' '}
-              vista - barrios unidos
-              {' '}
-              <br />
-              Bogota
-              {' '}
-              <br />
+              {asd._id} vista - barrios unidos <br />
+              Bogota <br />
               Colombia
             </p>
           </div>
