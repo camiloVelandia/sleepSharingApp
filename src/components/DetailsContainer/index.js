@@ -6,4 +6,3 @@ const DetailsContainer = ()=>(
   <>
 );
 
-

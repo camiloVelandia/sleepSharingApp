@@ -48,7 +48,7 @@ const {detailsRooms} = props
           <div>
             <i className="fas fa-map-marker-alt" />
             <p>
-              {asd._id}
+              {}
               {' '}
               vista - barrios unidos
               {' '}
