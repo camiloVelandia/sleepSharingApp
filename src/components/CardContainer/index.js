@@ -9,10 +9,9 @@ const CardContainer = (props) => {
     props.getrooms()
   },[])
 
-const {filterByLocationReducer} = props
-  const {roomsByLocation} = filterByLocationReducer
-  const { getRoomReducer } = props
-  const { body } = getRoomReducer
+
+  const { getRoomReducer} = props
+  const { body,roomsByLocation  } = getRoomReducer
   return (
     <Section>
       <h2>Destacados</h2>
@@ -27,11 +26,10 @@ const {filterByLocationReducer} = props
   );
 };
 
-const mapStateToProps = ({ getRoomReducer, favoriteReducer, filterByLocationReducer }) => {
+const mapStateToProps = ({ getRoomReducer, favoriteReducer}) => {
   return {
     getRoomReducer,
     favoriteReducer,
-    filterByLocationReducer,
   }
 }
 

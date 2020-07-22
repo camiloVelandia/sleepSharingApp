@@ -2,7 +2,7 @@ import React from 'react';
 import { Formik, Form, Field } from 'formik';
 import newRoom from '../../services/newRoom';
 import Loader from '../../general/Sppiner';
-
+import FileUpload from '../FileUpload'
 import {
   Submit,
   H1,
@@ -160,6 +160,7 @@ const RegisterRoom = () => {
           </Container>
           <Container2>
             <Label>Agrega fotografias del lugar(minimo 2, maximo 8)</Label>
+            <FileUpload />
             {/* <File>
               <label htmlFor="upload-photo">
                 <i className="fas fa-camera" />
