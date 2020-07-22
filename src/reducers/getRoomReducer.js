@@ -1,5 +1,6 @@
 const INITIAL_STATE = {
   body: [],
+  roomsByLocation:[],
 };
 
 export default (state = INITIAL_STATE, action) => {
@@ -9,6 +10,10 @@ export default (state = INITIAL_STATE, action) => {
         ...state,
         body: action.payload,
       };
+    case 'ROOMS_BY_LOCATION':
+    console.log(action.payload)
+    const roomsByLocation = state.body.filter(rooms => rooms.localidad.toLowerCase().includes(action.payload.toLowerCase()))
+      return {...state, roomsByLocation};
       default:
         return state;
   }
