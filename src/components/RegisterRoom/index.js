@@ -2,7 +2,7 @@ import React from 'react';
 import { Formik, Form, Field } from 'formik';
 import newRoom from '../../services/newRoom';
 import Loader from '../../general/Sppiner';
-import FileUpload from '../FileUpload'
+import FileUpload from '../FileUpload';
 import {
   Submit,
   H1,
@@ -35,9 +35,6 @@ const RegisterRoom = () => {
         ciudad: '',
         fotografias: [
           'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTTJ2DIWbZJI1h_C8oYFfxyOX1lj9PGjLERAQ&usqp=CAU',
-          'https://s3.amazonaws.com/imagenes.fincaraiz.com.co/FC_COL/2018/08/06/3839078/casa-venta-atlantico-barranquilla-274592551.jpg',
-          'https://images.ctfassets.net/8lc7xdlkm4kt/4sInYEGeWyztEJ9RQSIWgF/210cb7dcc3367bd5ef269436788ce4f7/lemont-casas-envigado-sala.jpg?w=1366&q=100',
-          'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRBYDkf-jhQgJqLW39kMUOXmlKjWpkalX7NDw&usqp=CAU',
         ],
         muebles: '',
         iconos: ['wifi', 'baño'],
@@ -122,11 +119,7 @@ const RegisterRoom = () => {
               </Field>
               <span>{errors.localidad}</span>
 
-              <Field
-                name="tamanio"
-                type="text"
-                placeholder="Tamaño em mts2"
-              />
+              <Field name="tamanio" type="text" placeholder="Tamaño em mts2" />
               <span>{errors.tamanio}</span>
               <Field name="precio" type="text" placeholder="Precio" />
               <span>{errors.precio}</span>
@@ -160,6 +153,7 @@ const RegisterRoom = () => {
           </Container>
           <Container2>
             <Label>Agrega fotografias del lugar(minimo 2, maximo 8)</Label>
+
             <FileUpload />
             {/* <File>
               <label htmlFor="upload-photo">
