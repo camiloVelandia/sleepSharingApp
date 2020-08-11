@@ -55,7 +55,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Implemented by:
 
--Stiven Jimenez Quintero
--Camilo Velandia
--Jhon Guerrero
--Lennin Ibarra
+-Stiven Jimenez Quintero <br>
+-Camilo Velandia <br>
+-Jhon Guerrero <br>
+-Lennin Ibarra <br>
