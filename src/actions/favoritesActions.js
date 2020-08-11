@@ -28,3 +28,10 @@ export const getLocation = (payload) => (dispatch) => {
     payload,
   });
 };
+export const getdetails = (payload) => (dispatch) => {
+  dispatch({
+    type: 'DETAILS_ROOMS',
+    payload,
+  });
+};
+

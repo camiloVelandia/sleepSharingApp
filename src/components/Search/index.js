@@ -2,18 +2,14 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import * as favoritesActions from '../../actions/favoritesActions';
 
+
 const Search = (props) => {
   const [location, setLocation] = useState('');
 
-  // useEffect(() => {
-  //   props.getLocation()
-  // },[])
-
   const filterByLocation = (e) => {
     setLocation(e.target.value);
-    props.getLocation(location);
+    props.getLocation(e.target.value);
   };
-
 
   return (
     <div>
@@ -27,8 +23,10 @@ const Search = (props) => {
   );
 };
 
-const mapStateToProps = (reducers) => {
-  return reducers.favoriteReducer;
+const mapStateToProps = ({getroomsReducer}) => {
+  return {
+    getroomsReducer
+  }
 }
 
 export default connect(mapStateToProps, favoritesActions)(Search);

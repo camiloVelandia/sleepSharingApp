@@ -70,8 +70,8 @@ const Cards = (props) => {
         <>
           <Link
             to={{
-              pathname: '/Details',
-              search: `?id${_id}`,
+              pathname:'/Details',
+              search:`${_id}`
             }}
           >
             <ImgCover loading="lazy" src={cover} alt="" />
